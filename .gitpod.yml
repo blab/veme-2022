@@ -1,0 +1,5 @@
+image: nextstrain/base:latest
+tasks:
+  - command: |
+      nextstrain check-setup --set-default
+      clear
