@@ -10,7 +10,7 @@
 ## Scope
 
 This workshop focuses on specific file formats, command line instructions required to analyze a specific pathogen, and instructions to visualize and interpret that pathogen's phylogeny in Auspice as a way of exposing the learners to the details of Nextstrain's genomic epidemiology tools.
-This workshop does not include discussions about installation of tools, data curation, or workflow design; these topics are critical but outside the scope of a 1.5-2 hour workshop on genomic epidemiology.
+This workshop does not include discussions about installation of tools, data curation, or workflow design; these topics are critical but outside the scope of a short workshop on genomic epidemiology.
 
 ## Learning objectives
 
@@ -54,6 +54,7 @@ The process for creating a Nextstrain analysis generally requires the following 
 
 Inspect input files for SARS-CoV-2 analysis.
 We will use a curated reference genome and annotations from Nextclade.
+Inspect the contents of the reference genome FASTA and the gene map with genomic coordinates in [GFF format](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
 
 ``` bash
 head data/reference.fasta
@@ -61,7 +62,7 @@ head data/genemap.gff
 ```
 
 Next, inspect the genome sequences and metadata we have curated for this analysis.
-These consist of two text files, one in FASTA format and the other in a tab-separated values (TSV) format.
+These consist of two text files, one in [FASTA format](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/) and the other in a [tab-separated values (TSV) format](https://www.loc.gov/preservation/digital/formats/fdd/fdd000533.shtml).
 Genome sequences have:
 
   - One unique name per genome sequence that matches the name in the metadata.
