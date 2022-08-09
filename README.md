@@ -50,6 +50,8 @@ The process for creating a Nextstrain analysis generally requires the following 
     - Drag-and-drop onto [auspice.us](http://auspice.us).
     - Upload data to GitHub or Nextstrain Groups and view through [nextstrain.org](http://nextstrain.org).
 
+In this workshop, you will learn how to analyze previously curated data and then visualize and interpret the resulting annotated phylogenetic tree.
+
 ## Build an annotated time-scaled phylogeny of SARS-CoV-2
 
 Inspect input files for SARS-CoV-2 analysis.
@@ -371,3 +373,98 @@ To visualize the final tree and frequencies, we can drag these files together on
 ``` bash
 auspice view --datasetDir auspice/
 ```
+
+## Visualize and interpret a SARS-CoV-2 phylogeny
+
+> Note that while the following instructions describe a specific Nextstrain analysis, the same general steps will apply to any pathogen tree.
+
+### Layout
+
+Open [the Nextstrain build for SARS-CoV-2 in Africa as of September 2021](https://nextstrain.org/ncov/gisaid/africa/2021-09-03) and note layout of Auspice:
+
+  - Navigation panel on left
+  - Main panel on right
+    - Tree
+    - Map
+    - Diversity (or "Entropy")
+    - Frequencies
+    - Description
+    - Filter lists
+    - Metadata and downloads
+
+### Filter data
+
+[Filter the tree to just data from Africa](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?f_region=Africa).
+
+Note how the URL changes in response to interactions with Nextstrain.
+Saving state in the URL allows us to capture specific, detailed views for loading again later.
+Note the appearance of the counts of total genomes shown and "Filtered to" section at the top of the main panel.
+Filters act on tips and affect all panels:
+
+  - The tree hides filtered tips.
+  - The map resets its zoom to geographic positions of tips remaining in tree.
+  - The diversity panel shows only mutations for remaining tips.
+  - The frequencies panel normalizes frequencies to sum to 100% for remaining tips.
+
+Toggle filters with "eye" icons at the top of the main panel or below "Filter Data" section of the navigation panel.
+Remove filters with the "trash can" icons at the top of the main panel or below the "Filter Data" section.
+
+### Modify layout
+
+[Turn off the entropy panel and enable the grid view](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?d=tree,map,frequencies&f_region=Africa&p=grid).
+The URL now reflects three major changes to the default view.
+You can share this URL to send the same view to anyone else.
+Reset zoom on the map, as needed.
+
+### Curate a view of your data
+
+We often need to communicate evolutionary patterns from genomic data in the context of time and geographic location.
+For example, we may want to understand how mutations at Spike (S) 681 emerged and transmitted across a specific country or region of Africa.
+
+Most Nextstrain panels can communicate a subset of genotypic, geographic, and temporal information.
+The tree shows genotype through phylogenetic structure, time on the x-axis, and geography by color.
+The map shows genotype by color and geography on the x- and y-axes, but it does not communicate time.
+The frequency panel shows genotype by color and time along the x-axis, but it does not communicate geography.
+
+How can we effectively show the evolution site S:681 through space and time?
+
+[Color by genotype using grid view with time tree on the left and map on the right, entropy turned off, and frequencies enabled](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_region=Africa&p=grid).
+The map still represents all time points.
+This view shows the global perspective of this site's evolution, but we cannot tell how these changes occurred through time in a specific country.
+
+[Filter to Kenya and set "geographic resolution" to "division"](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_country=Kenya&f_region=Africa&p=grid&r=division).
+Reset zoom on map, as needed.
+In this view, information about timing of these genotypes is more effectively communicated by the frequencies panel than the tree.
+Note the additional "Filtered to" section with logical "and" between the existing "Africa" filter and the new "Kenya" filter.
+
+[Turn off the tree, keeping only the map and the frequencies panel](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=map,frequencies&f_country=Kenya&f_region=Africa&p=full&r=division).
+Now, we see the dynamics of S:681 mutations across divisions in Kenya and through time.
+The map still represents counts for all time points, so we have to imagine the waves of genotypes 681H and 681R taking place at the geographic level.
+
+[To understand the geographic distribution of recent strains in Kenya, drag the left handle of the date slider to early June 2021](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=map,frequencies&dmin=2021-06-01&f_country=Kenya&f_region=Africa&p=full&r=division) or enter "06 / 01 / 2021" after first clicking on the start date below the slider.
+This filters the data to the most recent strains, revealing a couple of dozen cases that appear to map in the middle of Kenya.
+
+[Doublecheck the resolution of geographic information by coloring the map by "Admin Division"](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=division&d=map,frequencies&dmin=2021-06-05&f_country=Kenya&f_region=Africa&p=full&r=division).
+This view reveals that we actually don't have division-level information for these recent strains.
+["Reset" the date filter to confirm that many strains do have division-level information](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=division&d=map,frequencies&f_country=Kenya&f_region=Africa&p=full&r=division).
+
+[Color by genotype at S:681 again and drag the date slider from the right handle back to the beginning of 2020](https://nextstrain.org/ncov/gisaid/africa/2021-09-01?c=gt-S_681&d=map,frequencies&dmax=2020-02-08&f_country=Kenya&f_region=Africa&p=full&r=division) or enter "09 / 01 / 2020" after first clicking on the end date below the slider.
+Then, drag the left handle of the slider slowly to the right and watch the map.
+This view allows you to filter the strains by time on the map view, showing when and where cases of a specific genotype first emerged.
+This requires manual intervention with Nextstrain.
+
+["Reset" the date filter, turn off the frequencies panel, and then click the "Play" button to animate the timing of S:681 genotypes on the map](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?animate=2019-12-06,2021-08-28,0,0,30000&c=gt-S_681&d=map&f_country=Kenya&f_region=Africa&p=full&r=division).
+
+[Inspect regional patterns in neighboring divisions by filtering data to Kilifi, Kwale, and Mombasa. Select "Play" from the date controls again to watch the evolution of S:681 genotypes in this region](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?animate=2019-12-06,2021-08-28,0,0,30000&c=gt-S_681&d=map&f_country=Kenya&f_division=Kilifi,Mombasa,Kwale&f_region=Africa&p=full&r=division&transmissions=show).
+
+["Reset" the date filter, turn on the tree, turn off the map, and select the "Scatter" tree layout](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?branches=hide&c=gt-S_681&d=tree&f_country=Kenya&f_division=Kilifi,Mombasa,Kwale&f_region=Africa&l=scatter&p=full&r=division&scatterY=gt&transmissions=show).
+This view also clearly quantifies the transmission of S:681 genotypes through time with time on the x-axis, the genotype on the y-axis and color.
+Toggle off the button for "Show branches" below the "Scatter" section of the navigation panel, to focus on the observed genomes.
+There are benefits and disadvantages to each of these views, depending on the question you want to answer or the pattern you want to communicate.
+
+## Next steps
+
+  - [Work through our guide to genomic epidemiology of SARS-CoV-2](https://docs.nextstrain.org/projects/ncov/en/latest/index.html).
+  - [Learn how to convert a series of shell commands into a Nextstrain workflow with Snakemake](https://github.com/huddlej/example-nextstrain-workflow).
+  - [Learn how to communicate results from genomic epidemiology analyses through Nextstrain Narratives](https://www.youtube.com/playlist?list=PLsFWZl6SQqWxN9SkbgdjU8sylIfhZNDiW).
+  - Get involved by [contributing to Nextstrain](https://docs.nextstrain.org/en/latest/guides/contribute/index.html), [asking questions on our discussion site](https://discussion.nextstrain.org/), or [reaching out by email at hello@nextstrain.org](hello@nextstrain.org).
