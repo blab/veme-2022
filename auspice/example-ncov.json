@@ -1,0 +1,3832 @@
+{
+  "version": "v2",
+  "meta": {
+    "updated": "2022-08-09",
+    "genome_annotations": {
+      "nuc": {
+        "end": 29903,
+        "start": 1,
+        "strand": "+"
+      },
+      "E": {
+        "end": 26472,
+        "seqid": "data/genemap.gff",
+        "start": 26245,
+        "strand": "+",
+        "type": "gene"
+      },
+      "M": {
+        "end": 27191,
+        "seqid": "data/genemap.gff",
+        "start": 26523,
+        "strand": "+",
+        "type": "gene"
+      },
+      "N": {
+        "end": 29533,
+        "seqid": "data/genemap.gff",
+        "start": 28274,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF1a": {
+        "end": 13468,
+        "seqid": "data/genemap.gff",
+        "start": 266,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF1b": {
+        "end": 21555,
+        "seqid": "data/genemap.gff",
+        "start": 13468,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF3a": {
+        "end": 26220,
+        "seqid": "data/genemap.gff",
+        "start": 25393,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF6": {
+        "end": 27387,
+        "seqid": "data/genemap.gff",
+        "start": 27202,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF7a": {
+        "end": 27759,
+        "seqid": "data/genemap.gff",
+        "start": 27394,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF7b": {
+        "end": 27887,
+        "seqid": "data/genemap.gff",
+        "start": 27756,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF8": {
+        "end": 28259,
+        "seqid": "data/genemap.gff",
+        "start": 27894,
+        "strand": "+",
+        "type": "gene"
+      },
+      "ORF9b": {
+        "end": 28577,
+        "seqid": "data/genemap.gff",
+        "start": 28284,
+        "strand": "+",
+        "type": "gene"
+      },
+      "S": {
+        "end": 25384,
+        "seqid": "data/genemap.gff",
+        "start": 21563,
+        "strand": "+",
+        "type": "gene"
+      }
+    },
+    "colorings": [
+      {
+        "key": "clade_membership",
+        "title": "Clade",
+        "type": "categorical"
+      },
+      {
+        "key": "num_date",
+        "title": "Sampling date",
+        "type": "continuous"
+      },
+      {
+        "key": "gt",
+        "title": "Genotype",
+        "type": "categorical"
+      },
+      {
+        "key": "country",
+        "title": "country",
+        "type": "categorical"
+      },
+      {
+        "key": "region",
+        "title": "region",
+        "type": "categorical",
+        "scale": [
+          [
+            "Africa",
+            "#CEB541"
+          ],
+          [
+            "Europe",
+            "#E39B39"
+          ],
+          [
+            "North America",
+            "#DC2F24"
+          ]
+        ]
+      },
+      {
+        "key": "Nextstrain_clade",
+        "title": "Nextstrain_clade",
+        "type": "categorical"
+      },
+      {
+        "key": "pango_lineage",
+        "title": "pango_lineage",
+        "type": "categorical"
+      }
+    ],
+    "filters": [
+      "clade_membership",
+      "country",
+      "pango_lineage",
+      "Nextstrain_clade",
+      "region"
+    ],
+    "geo_resolutions": [
+      {
+        "key": "country",
+        "demes": {
+          "South Africa": {
+            "latitude": -28.8166235,
+            "longitude": 24.991639
+          },
+          "Germany": {
+            "latitude": 51.0834196,
+            "longitude": 10.4234469
+          },
+          "United Kingdom": {
+            "latitude": 54.542713,
+            "longitude": -2.384858
+          },
+          "Denmark": {
+            "latitude": 56.0,
+            "longitude": 10.0
+          },
+          "Italy": {
+            "latitude": 42.6384261,
+            "longitude": 12.674297
+          },
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "India": {
+            "latitude": 22.3511148,
+            "longitude": 78.6677428
+          },
+          "Switzerland": {
+            "latitude": 47.00016,
+            "longitude": 8.01427
+          },
+          "China": {
+            "latitude": 35.000074,
+            "longitude": 104.999927
+          }
+        }
+      },
+      {
+        "key": "region",
+        "demes": {
+          "Africa": {
+            "latitude": 4.070194,
+            "longitude": 21.824559
+          },
+          "Europe": {
+            "latitude": 49.646237,
+            "longitude": 10.799454
+          },
+          "North America": {
+            "latitude": 28.2367447,
+            "longitude": -97.738017
+          }
+        }
+      }
+    ],
+    "panels": [
+      "tree",
+      "map",
+      "entropy",
+      "frequencies"
+    ]
+  },
+  "tree": {
+    "name": "NODE_0000012",
+    "node_attrs": {
+      "div": 0,
+      "num_date": {
+        "value": 2019.9849315068493
+      },
+      "clade_membership": {
+        "value": "19A"
+      },
+      "country": {
+        "value": "China",
+        "confidence": {
+          "China": 0.45175585541987906,
+          "Germany": 0.13640026489263357,
+          "USA": 0.2002033397066528,
+          "United Kingdom": 0.0705238024716512
+        },
+        "entropy": 1.635763986505226
+      },
+      "region": {
+        "value": "Asia",
+        "confidence": {
+          "Africa": 0.01487288231494699,
+          "Asia": 0.4752910091930367,
+          "Europe": 0.38759154907456994,
+          "North America": 0.12224455941744632
+        },
+        "entropy": 1.0404088348728284
+      }
+    },
+    "branch_attrs": {
+      "mutations": {},
+      "labels": {
+        "clade": "19A"
+      }
+    },
+    "children": [
+      {
+        "name": "Wuhan-Hu-1/2019",
+        "node_attrs": {
+          "div": 1.512121733720548e-22,
+          "num_date": {
+            "value": 2019.9849315068493
+          },
+          "url": "https://www.ncbi.nlm.nih.gov/nuccore/MN908947",
+          "author": {
+            "author": "Wu et al",
+            "title": "Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome",
+            "value": "Wu et al"
+          },
+          "pango_lineage": {
+            "value": "B"
+          },
+          "Nextstrain_clade": {
+            "value": "19A"
+          },
+          "clade_membership": {
+            "value": "19A"
+          },
+          "country": {
+            "value": "China",
+            "confidence": {
+              "China": 1.0
+            },
+            "entropy": -1.000088900581841e-12
+          },
+          "region": {
+            "value": "Asia",
+            "confidence": {
+              "Asia": 1.0
+            },
+            "entropy": -1.000088900581841e-12
+          }
+        },
+        "branch_attrs": {
+          "mutations": {}
+        }
+      },
+      {
+        "name": "NODE_0000002",
+        "node_attrs": {
+          "div": 0.000133723467520062,
+          "num_date": {
+            "value": 2020.4723569358123
+          },
+          "clade_membership": {
+            "value": "20A"
+          },
+          "country": {
+            "value": "USA",
+            "confidence": {
+              "Germany": 0.3018980960183043,
+              "Italy": 0.06339292166915572,
+              "USA": 0.5072720548082474,
+              "United Kingdom": 0.08062374481071265
+            },
+            "entropy": 1.2850564616763382
+          },
+          "region": {
+            "value": "Europe",
+            "confidence": {
+              "Asia": 0.005405803919895169,
+              "Europe": 0.7456804305556073,
+              "North America": 0.24856700226110653
+            },
+            "entropy": 0.5958243532050851
+          }
+        },
+        "branch_attrs": {
+          "mutations": {
+            "nuc": [
+              "C241T",
+              "C3037T",
+              "T11288-",
+              "C11289-",
+              "T11290-",
+              "G11291-",
+              "G11292-",
+              "T11293-",
+              "T11294-",
+              "T11295-",
+              "T11296-",
+              "C14408T",
+              "A23403G"
+            ],
+            "ORF1a": [
+              "S3675-",
+              "G3676-",
+              "F3677-"
+            ],
+            "ORF1b": [
+              "P314L"
+            ],
+            "S": [
+              "D614G"
+            ]
+          },
+          "labels": {
+            "aa": "ORF1a: S3675-, G3676-, F3677-; ORF1b: P314L; S: D614G",
+            "clade": "20A"
+          }
+        },
+        "children": [
+          {
+            "name": "ITA/ABR-IZSGC-TE161253/2021",
+            "node_attrs": {
+              "div": 0.0011068338181197991,
+              "num_date": {
+                "value": 2021.204109589041
+              },
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/MZ362440",
+              "author": {
+                "author": "Delli Compagni et al",
+                "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ITA/ABR-IZSGC-TE161253/2021, complete genome",
+                "value": "Delli Compagni et al"
+              },
+              "pango_lineage": {
+                "value": "B.1.525"
+              },
+              "Nextstrain_clade": {
+                "value": "21D (Eta)"
+              },
+              "clade_membership": {
+                "value": "21D (Eta)"
+              },
+              "country": {
+                "value": "Italy",
+                "confidence": {
+                  "Italy": 1.0
+                },
+                "entropy": -1.000088900581841e-12
+              },
+              "region": {
+                "value": "Europe",
+                "confidence": {
+                  "Europe": 1.0
+                },
+                "entropy": -1.000088900581841e-12
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C1498T",
+                  "A1807G",
+                  "G2659A",
+                  "C4668T",
+                  "C6285T",
+                  "T8593C",
+                  "C14407T",
+                  "G17679T",
+                  "C17977T",
+                  "C18171T",
+                  "A20724G",
+                  "A21717G",
+                  "C21762T",
+                  "T21765-",
+                  "A21766-",
+                  "C21767-",
+                  "A21768-",
+                  "T21769-",
+                  "G21770-",
+                  "T21992-",
+                  "A21993-",
+                  "T21994-",
+                  "G22225A",
+                  "G23012A",
+                  "G23593C",
+                  "T23659G",
+                  "T24224C",
+                  "C24748T",
+                  "G25429T",
+                  "C25528T",
+                  "C25889T",
+                  "C26305T",
+                  "T26767C",
+                  "T27205-",
+                  "T27206-",
+                  "T27207-",
+                  "C28278-",
+                  "T28279-",
+                  "G28280-",
+                  "C28308G",
+                  "A28699G",
+                  "C28887T",
+                  "G29543T",
+                  "T29728G"
+                ],
+                "E": [
+                  "L21F"
+                ],
+                "M": [
+                  "I82T"
+                ],
+                "N": [
+                  "S2X",
+                  "D3X",
+                  "A12G",
+                  "T205I",
+                  "*420X"
+                ],
+                "ORF1a": [
+                  "S1468F",
+                  "T2007I"
+                ],
+                "ORF1b": [
+                  "L314F",
+                  "L1504F"
+                ],
+                "ORF3a": [
+                  "V13L",
+                  "L46F",
+                  "S166L"
+                ],
+                "ORF6": [
+                  "F2-"
+                ],
+                "ORF9b": [
+                  "H9D"
+                ],
+                "S": [
+                  "Q52R",
+                  "A67V",
+                  "I68X",
+                  "H69-",
+                  "V70X",
+                  "Y144-",
+                  "E484K",
+                  "Q677H",
+                  "F888L",
+                  "*1274X"
+                ]
+              },
+              "labels": {
+                "aa": "E: L21F; M: I82T; N: S2X, D3X, A12G, T205I, *420X; ORF1a: S1468F, T2007I; ORF1b: L314F, L1504F; ORF3a: V13L, L46F, S166L; ORF6: F2-; ORF9b: H9D; S: Q52R, A67V, I68X, H69-, V70X, Y144-, E484K, Q677H, F888L, *1274X",
+                "clade": "21D (Eta)"
+              }
+            }
+          },
+          {
+            "name": "NODE_0000000",
+            "node_attrs": {
+              "div": 0.00020058077614061397,
+              "num_date": {
+                "value": 2020.5293223560745
+              },
+              "clade_membership": {
+                "value": "20C"
+              },
+              "country": {
+                "value": "USA",
+                "confidence": {
+                  "Germany": 0.12773883563017413,
+                  "South Africa": 0.038026027089704595,
+                  "USA": 0.6243216668557665,
+                  "United Kingdom": 0.1547157555502183
+                },
+                "entropy": 1.2112346865915606
+              },
+              "region": {
+                "value": "Europe",
+                "confidence": {
+                  "Africa": 0.0160134366422393,
+                  "Asia": 0.005055523802880722,
+                  "Europe": 0.5090358256140827,
+                  "North America": 0.4698952139407974
+                },
+                "entropy": 0.7915407601264226
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C1059T",
+                  "G25563T"
+                ],
+                "ORF1a": [
+                  "T265I"
+                ],
+                "ORF3a": [
+                  "Q57H"
+                ]
+              },
+              "labels": {
+                "aa": "ORF1a: T265I; ORF3a: Q57H",
+                "clade": "20C"
+              }
+            },
+            "children": [
+              {
+                "name": "USA/OH-CDC-2-3845319/2021",
+                "node_attrs": {
+                  "div": 0.0008701034666278072,
+                  "num_date": {
+                    "value": 2021.058904109589
+                  },
+                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/MW708662",
+                  "author": {
+                    "author": "Queen et al",
+                    "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/OH-CDC-2-3845319/2021, complete genome",
+                    "value": "Queen et al"
+                  },
+                  "pango_lineage": {
+                    "value": "B.1.2"
+                  },
+                  "Nextstrain_clade": {
+                    "value": "20G"
+                  },
+                  "clade_membership": {
+                    "value": "20G"
+                  },
+                  "country": {
+                    "value": "USA",
+                    "confidence": {
+                      "USA": 1.0
+                    },
+                    "entropy": -1.000088900581841e-12
+                  },
+                  "region": {
+                    "value": "North America",
+                    "confidence": {
+                      "North America": 0.9999999999999999
+                    },
+                    "entropy": -9.99866855976916e-13
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G428A",
+                      "G1942T",
+                      "C4586T",
+                      "G8083A",
+                      "A9085G",
+                      "C10319T",
+                      "-11288T",
+                      "-11289C",
+                      "-11290T",
+                      "-11291G",
+                      "-11292G",
+                      "-11293T",
+                      "-11294T",
+                      "-11295T",
+                      "-11296T",
+                      "C12897T",
+                      "C14805T",
+                      "C16887T",
+                      "C16952T",
+                      "A18424G",
+                      "C21304T",
+                      "C22480T",
+                      "G23593T",
+                      "G25593A",
+                      "G25907T",
+                      "C27964T",
+                      "C28472T",
+                      "C28869T",
+                      "G29402T"
+                    ],
+                    "N": [
+                      "P67S",
+                      "P199L",
+                      "D377Y"
+                    ],
+                    "ORF1a": [
+                      "E55K",
+                      "M2606I",
+                      "L3352F",
+                      "-3675S",
+                      "-3676G",
+                      "-3677F",
+                      "P4211L"
+                    ],
+                    "ORF1b": [
+                      "T1162I",
+                      "N1653D",
+                      "R2613C"
+                    ],
+                    "ORF3a": [
+                      "G172V"
+                    ],
+                    "ORF8": [
+                      "S24L"
+                    ],
+                    "S": [
+                      "Q677H"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "N: P67S, P199L, D377Y; ORF1a: E55K, M2606I, L3352F, -3675S, -3676G, -3677F, P4211L; ORF1b: T1162I, N1653D, R2613C; ORF3a: G172V; ORF8: S24L; S: Q677H",
+                    "clade": "20G"
+                  }
+                }
+              },
+              {
+                "name": "NODE_0000001",
+                "node_attrs": {
+                  "div": 0.0006358082064885435,
+                  "num_date": {
+                    "value": 2020.9678007934262
+                  },
+                  "clade_membership": {
+                    "value": "20H (Beta, V2)"
+                  },
+                  "country": {
+                    "value": "United Kingdom",
+                    "confidence": {
+                      "Germany": 0.0684391954480825,
+                      "South Africa": 0.21736577881412544,
+                      "USA": 0.21820278721836642,
+                      "United Kingdom": 0.4408111417440777
+                    },
+                    "entropy": 1.456339790157542
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Africa": 0.13255749169694597,
+                      "Asia": 0.01012886146279689,
+                      "Europe": 0.664672990751952,
+                      "North America": 0.19264065608830513
+                    },
+                    "entropy": 0.9031373384304913
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G174T",
+                      "G5230T",
+                      "A10323G",
+                      "A21801C",
+                      "A22206G",
+                      "T22283-",
+                      "T22284-",
+                      "A22285-",
+                      "C22286-",
+                      "T22287-",
+                      "T22288-",
+                      "G22289-",
+                      "C22290-",
+                      "T22291-",
+                      "G22813T",
+                      "G23012A",
+                      "A23063T",
+                      "C23664T",
+                      "C25904T",
+                      "C26456T",
+                      "C28253T",
+                      "C28887T"
+                    ],
+                    "E": [
+                      "P71L"
+                    ],
+                    "N": [
+                      "T205I"
+                    ],
+                    "ORF1a": [
+                      "K1655N",
+                      "K3353R"
+                    ],
+                    "ORF3a": [
+                      "S171L"
+                    ],
+                    "S": [
+                      "D80A",
+                      "D215G",
+                      "L241-",
+                      "L242-",
+                      "A243-",
+                      "K417N",
+                      "E484K",
+                      "N501Y",
+                      "A701V"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "E: P71L; N: T205I; ORF1a: K1655N, K3353R; ORF3a: S171L; S: D80A, D215G, L241-, L242-, A243-, K417N, E484K, N501Y, A701V",
+                    "clade": "20H (Beta, V2)"
+                  }
+                },
+                "children": [
+                  {
+                    "name": "SouthAfrica/NHLS-UCT-GS-B449/2021",
+                    "node_attrs": {
+                      "div": 0.0009704531380101862,
+                      "num_date": {
+                        "value": 2021.2835616438356
+                      },
+                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OM765395",
+                      "author": {
+                        "author": "Viana et al",
+                        "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/SouthAfrica/NHLS-UCT-GS-B449/2021 ORF1ab polyprotein (ORF1ab), ORF1a polyprotein (ORF1ab), surface glycoprotein (S), ORF3a protein (ORF3a), envelope protein (E), membrane glycoprotein (M), ORF6 protein (ORF6), ORF7a protein (ORF7a), ORF7b (ORF7b), ORF8 protein (ORF8), nucleocapsid phosphoprotein (N), and ORF10 protein (ORF10) genes, complete cds",
+                        "value": "Viana et al"
+                      },
+                      "pango_lineage": {
+                        "value": "B.1.351"
+                      },
+                      "Nextstrain_clade": {
+                        "value": "20H (Beta, V2)"
+                      },
+                      "clade_membership": {
+                        "value": "20H (Beta, V2)"
+                      },
+                      "country": {
+                        "value": "South Africa",
+                        "confidence": {
+                          "South Africa": 1.0
+                        },
+                        "entropy": -1.000088900581841e-12
+                      },
+                      "region": {
+                        "value": "Africa",
+                        "confidence": {
+                          "Africa": 1.0
+                        },
+                        "entropy": -1.000088900581841e-12
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G6373T",
+                          "C9142T",
+                          "T9982C",
+                          "C10332T",
+                          "C19524T",
+                          "T24295C",
+                          "G26690T",
+                          "G28321T",
+                          "G29081T",
+                          "C29253T"
+                        ],
+                        "N": [
+                          "V270L",
+                          "S327L"
+                        ],
+                        "ORF1a": [
+                          "M2036I",
+                          "T3356I"
+                        ],
+                        "ORF9b": [
+                          "R13L"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "N: V270L, S327L; ORF1a: M2036I, T3356I; ORF9b: R13L"
+                      }
+                    }
+                  },
+                  {
+                    "name": "England/HSLL-15BC1EA/2021",
+                    "node_attrs": {
+                      "div": 0.0010710431165002513,
+                      "num_date": {
+                        "value": 2021.3958904109588
+                      },
+                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU305948",
+                      "author": {
+                        "author": "Health Services et al",
+                        "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                        "value": "Health Services et al"
+                      },
+                      "pango_lineage": {
+                        "value": "B.1.351.3"
+                      },
+                      "Nextstrain_clade": {
+                        "value": "20H (Beta, V2)"
+                      },
+                      "clade_membership": {
+                        "value": "20H (Beta, V2)"
+                      },
+                      "country": {
+                        "value": "United Kingdom",
+                        "confidence": {
+                          "United Kingdom": 0.9999999999999999
+                        },
+                        "entropy": -9.99866855976916e-13
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Europe": 0.9999999999999999
+                        },
+                        "entropy": -9.99866855976916e-13
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C1288T",
+                          "C1884T",
+                          "A2692T",
+                          "C6402T",
+                          "T7624C",
+                          "A8052G",
+                          "T8329C",
+                          "G10396T",
+                          "C10615T",
+                          "A16687G",
+                          "C21614T",
+                          "G25494C",
+                          "C25603T"
+                        ],
+                        "ORF1a": [
+                          "A540V",
+                          "P2046L",
+                          "N2596S"
+                        ],
+                        "ORF1b": [
+                          "I1074V"
+                        ],
+                        "S": [
+                          "L18F"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: A540V, P2046L, N2596S; ORF1b: I1074V; S: L18F"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NODE_0000003",
+            "node_attrs": {
+              "div": 0.00016714978068038493,
+              "num_date": {
+                "value": 2020.5079064423621
+              },
+              "clade_membership": {
+                "value": "20A"
+              },
+              "country": {
+                "value": "Germany",
+                "confidence": {
+                  "Germany": 0.7857645338614178,
+                  "Italy": 0.009909578593172631,
+                  "USA": 0.1359154112152371,
+                  "United Kingdom": 0.043090792111816725
+                },
+                "entropy": 0.7737739140460771
+              },
+              "region": {
+                "value": "Europe",
+                "confidence": {
+                  "Africa": 0.0012818749877445742,
+                  "Asia": 0.00874935258087293,
+                  "Europe": 0.835621545846108,
+                  "North America": 0.15434722658527436
+                },
+                "entropy": 0.48846383368611485
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "-11288T",
+                  "-11289C",
+                  "-11290T",
+                  "-11291G",
+                  "-11292G",
+                  "-11293T",
+                  "-11294T",
+                  "-11295T",
+                  "-11296T",
+                  "G29402T"
+                ],
+                "N": [
+                  "D377Y"
+                ],
+                "ORF1a": [
+                  "-3675S",
+                  "-3676G",
+                  "-3677F"
+                ]
+              },
+              "labels": {
+                "aa": "N: D377Y; ORF1a: -3675S, -3676G, -3677F"
+              }
+            },
+            "children": [
+              {
+                "name": "OU096409",
+                "node_attrs": {
+                  "div": 0.0007359471428980282,
+                  "num_date": {
+                    "value": 2021.1712328767123
+                  },
+                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU096409",
+                  "author": {
+                    "author": "?",
+                    "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                    "value": "? A"
+                  },
+                  "pango_lineage": {
+                    "value": "B.1.177.86"
+                  },
+                  "Nextstrain_clade": {
+                    "value": "20E (EU1)"
+                  },
+                  "clade_membership": {
+                    "value": "20E (EU1)"
+                  },
+                  "country": {
+                    "value": "Germany",
+                    "confidence": {
+                      "Germany": 1.0
+                    },
+                    "entropy": -1.000088900581841e-12
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Europe": 1.0
+                    },
+                    "entropy": -1.000088900581841e-12
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "T445C",
+                      "C4206T",
+                      "C6040T",
+                      "C6286T",
+                      "C12100T",
+                      "C13133T",
+                      "T13402C",
+                      "T13725C",
+                      "C18701T",
+                      "G21255C",
+                      "C21614T",
+                      "C22227T",
+                      "C26801T",
+                      "G27870T",
+                      "C27944T",
+                      "C28932T",
+                      "G29645T"
+                    ],
+                    "N": [
+                      "A220V"
+                    ],
+                    "ORF1a": [
+                      "A1314V",
+                      "P4290S"
+                    ],
+                    "ORF1b": [
+                      "S1745L"
+                    ],
+                    "ORF7b": [
+                      "E39*"
+                    ],
+                    "S": [
+                      "L18F",
+                      "A222V"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "N: A220V; ORF1a: A1314V, P4290S; ORF1b: S1745L; ORF7b: E39*; S: L18F, A222V",
+                    "clade": "20E (EU1)"
+                  }
+                }
+              },
+              {
+                "name": "NODE_0000004",
+                "node_attrs": {
+                  "div": 0.00040121480554968956,
+                  "num_date": {
+                    "value": 2020.7130349903596
+                  },
+                  "clade_membership": {
+                    "value": "20A"
+                  },
+                  "country": {
+                    "value": "Germany",
+                    "confidence": {
+                      "Germany": 0.7985606160368837,
+                      "India": 0.02871107760279082,
+                      "USA": 0.09719844116521523,
+                      "United Kingdom": 0.052721905519171705
+                    },
+                    "entropy": 0.7859682884353344
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Africa": 0.0022175710387083007,
+                      "Asia": 0.03479253493056527,
+                      "Europe": 0.7827409132963937,
+                      "North America": 0.1802489807343326
+                    },
+                    "entropy": 0.6309745948341227
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G210T",
+                      "T22917G",
+                      "C23604G",
+                      "C25469T",
+                      "T27638C",
+                      "A28271-",
+                      "G28881T",
+                      "G29742T"
+                    ],
+                    "N": [
+                      "R203M"
+                    ],
+                    "ORF3a": [
+                      "S26L"
+                    ],
+                    "ORF7a": [
+                      "V82A"
+                    ],
+                    "S": [
+                      "L452R",
+                      "P681R"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "N: R203M; ORF3a: S26L; ORF7a: V82A; S: L452R, P681R"
+                  }
+                },
+                "children": [
+                  {
+                    "name": "NODE_0000005",
+                    "node_attrs": {
+                      "div": 0.0007356901964828389,
+                      "num_date": {
+                        "value": 2020.97611646274
+                      },
+                      "clade_membership": {
+                        "value": "21B (Kappa)"
+                      },
+                      "country": {
+                        "value": "Germany",
+                        "confidence": {
+                          "Germany": 0.7702466565291607,
+                          "India": 0.1304807063805909,
+                          "USA": 0.04372716436265464,
+                          "United Kingdom": 0.030612577370160623
+                        },
+                        "entropy": 0.8424429754617182
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Africa": 0.003729189894068358,
+                          "Asia": 0.16874278161127448,
+                          "Europe": 0.7349338425459002,
+                          "North America": 0.09259418594875696
+                        },
+                        "entropy": 0.7677811319619168
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "C3457T",
+                          "C4965T",
+                          "A11201G",
+                          "G17523T",
+                          "A20396G",
+                          "T21895C",
+                          "G22022A",
+                          "G23012C",
+                          "A24775T",
+                          "T27299C"
+                        ],
+                        "ORF1a": [
+                          "T1567I",
+                          "T3646A"
+                        ],
+                        "ORF1b": [
+                          "M1352I",
+                          "K2310R"
+                        ],
+                        "ORF6": [
+                          "I33T"
+                        ],
+                        "S": [
+                          "E154K",
+                          "E484Q",
+                          "Q1071H"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: T1567I, T3646A; ORF1b: M1352I, K2310R; ORF6: I33T; S: E154K, E484Q, Q1071H",
+                        "clade": "21B (Kappa)"
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "IND/GBRC570b/2021",
+                        "node_attrs": {
+                          "div": 0.001070121839893511,
+                          "num_date": {
+                            "value": 2021.217808219178
+                          },
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/MZ314692",
+                          "author": {
+                            "author": "Savaliya et al",
+                            "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC570b/2021, complete genome",
+                            "value": "Savaliya et al"
+                          },
+                          "pango_lineage": {
+                            "value": "B.1.617"
+                          },
+                          "Nextstrain_clade": {
+                            "value": "21B (Kappa)"
+                          },
+                          "clade_membership": {
+                            "value": "21B (Kappa)"
+                          },
+                          "country": {
+                            "value": "India",
+                            "confidence": {
+                              "India": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          },
+                          "region": {
+                            "value": "Asia",
+                            "confidence": {
+                              "Asia": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "G425A",
+                              "G1738T",
+                              "G4298T",
+                              "T14408C",
+                              "G15463A",
+                              "T20401G",
+                              "G21987A",
+                              "G22706T",
+                              "G25019T",
+                              "G27750T"
+                            ],
+                            "ORF1a": [
+                              "V54I",
+                              "V1345L"
+                            ],
+                            "ORF1b": [
+                              "L314P",
+                              "V666I",
+                              "S2312A"
+                            ],
+                            "ORF7a": [
+                              "K119N"
+                            ],
+                            "S": [
+                              "G142D",
+                              "V382L",
+                              "D1153Y"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1a: V54I, V1345L; ORF1b: L314P, V666I, S2312A; ORF7a: K119N; S: G142D, V382L, D1153Y"
+                          }
+                        }
+                      },
+                      {
+                        "name": "OU153117",
+                        "node_attrs": {
+                          "div": 0.001036691255674409,
+                          "num_date": {
+                            "value": 2021.3191780821917
+                          },
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU153117",
+                          "author": {
+                            "author": "?",
+                            "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                            "value": "? A"
+                          },
+                          "pango_lineage": {
+                            "value": "B.1.617"
+                          },
+                          "Nextstrain_clade": {
+                            "value": "21B (Kappa)"
+                          },
+                          "clade_membership": {
+                            "value": "21B (Kappa)"
+                          },
+                          "country": {
+                            "value": "Germany",
+                            "confidence": {
+                              "Germany": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Europe": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C4582T",
+                              "T14155A",
+                              "C20936T",
+                              "C24863G",
+                              "C25276T",
+                              "A29700G",
+                              "G29734T",
+                              "A29776G",
+                              "A29806G"
+                            ],
+                            "ORF1b": [
+                              "S230T",
+                              "T2490M"
+                            ],
+                            "S": [
+                              "H1101D"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1b: S230T, T2490M; S: H1101D"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "NODE_0000006",
+                    "node_attrs": {
+                      "div": 0.0007022846237735585,
+                      "num_date": {
+                        "value": 2021.0609977914298
+                      },
+                      "clade_membership": {
+                        "value": "21A (Delta)"
+                      },
+                      "country": {
+                        "value": "Germany",
+                        "confidence": {
+                          "Germany": 0.7211046642572413,
+                          "India": 0.009941914885429564,
+                          "USA": 0.14275101496366036,
+                          "United Kingdom": 0.10009978815317176
+                        },
+                        "entropy": 0.9250069118261756
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Africa": 0.0016135868958733752,
+                          "Asia": 0.009340464554957031,
+                          "Europe": 0.735366080154286,
+                          "North America": 0.2536798683948835
+                        },
+                        "entropy": 0.6280359517648217
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G15451A",
+                          "C16466T",
+                          "C21618G",
+                          "G21987A",
+                          "A22029-",
+                          "G22030-",
+                          "T22031-",
+                          "T22032-",
+                          "C22033-",
+                          "A22034-",
+                          "C22995A",
+                          "G24410A",
+                          "T26767C",
+                          "C27752T",
+                          "G28248-",
+                          "A28249-",
+                          "T28250-",
+                          "T28251-",
+                          "T28252-",
+                          "C28253-",
+                          "A28461G"
+                        ],
+                        "M": [
+                          "I82T"
+                        ],
+                        "N": [
+                          "D63G"
+                        ],
+                        "ORF1b": [
+                          "G662S",
+                          "P1000L"
+                        ],
+                        "ORF7a": [
+                          "T120I"
+                        ],
+                        "ORF8": [
+                          "D119-",
+                          "F120-"
+                        ],
+                        "ORF9b": [
+                          "T60A"
+                        ],
+                        "S": [
+                          "T19R",
+                          "G142D",
+                          "E156X",
+                          "F157-",
+                          "R158X",
+                          "T478K",
+                          "D950N",
+                          "*1274X"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "M: I82T; N: D63G; ORF1b: G662S, P1000L; ORF7a: T120I; ORF8: D119-, F120-; ORF9b: T60A; S: T19R, G142D, E156X, F157-, R158X, T478K, D950N, *1274X",
+                        "clade": "21A (Delta)"
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "NODE_0000007",
+                        "node_attrs": {
+                          "div": 0.0008025886197489188,
+                          "num_date": {
+                            "value": 2021.1664884932873
+                          },
+                          "clade_membership": {
+                            "value": "21A (Delta)"
+                          },
+                          "country": {
+                            "value": "Germany",
+                            "confidence": {
+                              "Germany": 0.7403294199486401,
+                              "Switzerland": 0.031046725468714356,
+                              "USA": 0.07189325927886438,
+                              "United Kingdom": 0.13225249885781543
+                            },
+                            "entropy": 0.9169017400583956
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Africa": 0.0012209198199375738,
+                              "Asia": 0.004160198571336707,
+                              "Europe": 0.8773227210243104,
+                              "North America": 0.11729616058441543
+                            },
+                            "entropy": 0.3971933658330022
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C5184T",
+                              "C9891T",
+                              "T11418C"
+                            ],
+                            "ORF1a": [
+                              "P1640L",
+                              "A3209V",
+                              "V3718A"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF1a: P1640L, A3209V, V3718A"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "OV658733",
+                            "node_attrs": {
+                              "div": 0.0015408149720752247,
+                              "num_date": {
+                                "value": 2021.9493150684932
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OV658733",
+                              "author": {
+                                "author": "?",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                "value": "? A"
+                              },
+                              "pango_lineage": {
+                                "value": "AY.51"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "21A (Delta)"
+                              },
+                              "clade_membership": {
+                                "value": "21A (Delta)"
+                              },
+                              "country": {
+                                "value": "Germany",
+                                "confidence": {
+                                  "Germany": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "G213T",
+                                  "C936T",
+                                  "C1191T",
+                                  "C1267T",
+                                  "A4576T",
+                                  "T4579A",
+                                  "G10870T",
+                                  "G12223T",
+                                  "T12946C",
+                                  "G17964T",
+                                  "C18176T",
+                                  "A20262G",
+                                  "C23039G",
+                                  "G23120T",
+                                  "A25562G",
+                                  "G25621A",
+                                  "A25697T",
+                                  "C27739T",
+                                  "C28833T",
+                                  "T28918C",
+                                  "C29218T",
+                                  "C29367T"
+                                ],
+                                "N": [
+                                  "S187L",
+                                  "P365L"
+                                ],
+                                "ORF1a": [
+                                  "T224I",
+                                  "P309L"
+                                ],
+                                "ORF1b": [
+                                  "M1499I",
+                                  "P1570L"
+                                ],
+                                "ORF3a": [
+                                  "Q57R",
+                                  "V77I",
+                                  "E102V"
+                                ],
+                                "ORF7a": [
+                                  "L116F"
+                                ],
+                                "S": [
+                                  "Q493E",
+                                  "A520S"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "N: S187L, P365L; ORF1a: T224I, P309L; ORF1b: M1499I, P1570L; ORF3a: Q57R, V77I, E102V; ORF7a: L116F; S: Q493E, A520S"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000008",
+                            "node_attrs": {
+                              "div": 0.000969787172187409,
+                              "num_date": {
+                                "value": 2021.4570490037609
+                              },
+                              "clade_membership": {
+                                "value": "21I (Delta)"
+                              },
+                              "country": {
+                                "value": "United Kingdom",
+                                "confidence": {
+                                  "Germany": 0.2539438103757059,
+                                  "Switzerland": 0.21959781963548602,
+                                  "USA": 0.060879492874221584,
+                                  "United Kingdom": 0.41964621348586195
+                                },
+                                "entropy": 1.4310559946127528
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Asia": 0.0028594864357265807,
+                                  "Europe": 0.9315684401491664,
+                                  "North America": 0.06459071984633205
+                                },
+                                "entropy": 0.26653875899169394
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "A5584G",
+                                  "C11514T",
+                                  "C13019T",
+                                  "C22227T",
+                                  "C22792T"
+                                ],
+                                "ORF1a": [
+                                  "T3750I"
+                                ],
+                                "S": [
+                                  "A222V"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: T3750I; S: A222V",
+                                "clade": "21I (Delta)"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "England/BRBR-1A7A8DF/2021",
+                                "node_attrs": {
+                                  "div": 0.0010366607184601887,
+                                  "num_date": {
+                                    "value": 2021.5767123287671
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU538213",
+                                  "author": {
+                                    "author": "Berkshire et al",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                    "value": "Berkshire et al"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "AY.9"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "21I (Delta)"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21I (Delta)"
+                                  },
+                                  "country": {
+                                    "value": "United Kingdom",
+                                    "confidence": {
+                                      "United Kingdom": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Europe": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G19009T",
+                                      "T21264C"
+                                    ],
+                                    "ORF1b": [
+                                      "D1848Y"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1b: D1848Y"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "Switzerland/TI-EOC-26295130/2021",
+                                "node_attrs": {
+                                  "div": 0.001338823457281469,
+                                  "num_date": {
+                                    "value": 2021.7931506849316
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU953600",
+                                  "author": {
+                                    "author": "?",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 isolate hCoV-19/Switzerland/TI-EOC-26295130/2021 genome assembly, chromosome: 1",
+                                    "value": "? B"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "AY.9.2"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "21I (Delta)"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21I (Delta)"
+                                  },
+                                  "country": {
+                                    "value": "Switzerland",
+                                    "confidence": {
+                                      "Switzerland": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Europe": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G1729A",
+                                      "T2537C",
+                                      "C4686T",
+                                      "G9802T",
+                                      "G14030A",
+                                      "C18086T",
+                                      "G20102T",
+                                      "C22858T",
+                                      "G24933T",
+                                      "A27086G",
+                                      "A28389T"
+                                    ],
+                                    "N": [
+                                      "Q39L"
+                                    ],
+                                    "ORF1a": [
+                                      "T1474I"
+                                    ],
+                                    "ORF1b": [
+                                      "R188Q",
+                                      "T1540I",
+                                      "S2212I"
+                                    ],
+                                    "ORF9b": [
+                                      "N36Y"
+                                    ],
+                                    "S": [
+                                      "G1124V"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: Q39L; ORF1a: T1474I; ORF1b: R188Q, T1540I, S2212I; ORF9b: N36Y; S: G1124V"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000009",
+                        "node_attrs": {
+                          "div": 0.0010703244051936082,
+                          "num_date": {
+                            "value": 2021.4616565424228
+                          },
+                          "clade_membership": {
+                            "value": "21J (Delta)"
+                          },
+                          "country": {
+                            "value": "Germany",
+                            "confidence": {
+                              "Denmark": 0.006393167608604388,
+                              "Germany": 0.4979598100439962,
+                              "USA": 0.33948151202540877,
+                              "United Kingdom": 0.1343364122497376
+                            },
+                            "entropy": 1.134325548724592
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Africa": 0.0013173667866102786,
+                              "Asia": 0.0038793028240688096,
+                              "Europe": 0.5407778356178856,
+                              "North America": 0.4540254947714353
+                            },
+                            "entropy": 0.7212160283286675
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "G4181T",
+                              "C6402T",
+                              "C7124T",
+                              "C8986T",
+                              "G9053T",
+                              "C10029T",
+                              "A11201G",
+                              "A11332G",
+                              "C19220T",
+                              "C27874T",
+                              "G28916T"
+                            ],
+                            "N": [
+                              "G215C"
+                            ],
+                            "ORF1a": [
+                              "A1306S",
+                              "P2046L",
+                              "P2287S",
+                              "V2930L",
+                              "T3255I",
+                              "T3646A"
+                            ],
+                            "ORF1b": [
+                              "A1918V"
+                            ],
+                            "ORF7b": [
+                              "T40I"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "N: G215C; ORF1a: A1306S, P2046L, P2287S, V2930L, T3255I, T3646A; ORF1b: A1918V; ORF7b: T40I",
+                            "clade": "21J (Delta)"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "USA/MI-CDC-ASC210341818/2021",
+                            "node_attrs": {
+                              "div": 0.001304478115609401,
+                              "num_date": {
+                                "value": 2021.768493150685
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OL387845",
+                              "author": {
+                                "author": "Howard et al",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/MI-CDC-ASC210341818/2021 ORF1ab polyprotein (ORF1ab), ORF1a polyprotein (ORF1ab), surface glycoprotein (S), ORF3a protein (ORF3a), envelope protein (E), membrane glycoprotein (M), ORF6 protein (ORF6), ORF7a protein (ORF7a), and ORF7b (ORF7b) genes, complete cds; ORF8 gene, complete sequence; and nucleocapsid phosphoprotein (N) and ORF10 protein (ORF10) genes, complete cds",
+                                "value": "Howard et al A"
+                              },
+                              "pango_lineage": {
+                                "value": "AY.25"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "21J (Delta)"
+                              },
+                              "clade_membership": {
+                                "value": "21J (Delta)"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "A3350G",
+                                  "T6654C",
+                                  "G12801A",
+                                  "C17550T",
+                                  "G22801T",
+                                  "G26107C",
+                                  "A27507C"
+                                ],
+                                "ORF1a": [
+                                  "S1029G",
+                                  "V2130A",
+                                  "R4179K"
+                                ],
+                                "ORF3a": [
+                                  "E239Q"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: S1029G, V2130A, R4179K; ORF3a: E239Q"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000010",
+                            "node_attrs": {
+                              "div": 0.001103755086604203,
+                              "num_date": {
+                                "value": 2021.4762978100352
+                              },
+                              "clade_membership": {
+                                "value": "21J (Delta)"
+                              },
+                              "country": {
+                                "value": "Germany",
+                                "confidence": {
+                                  "Denmark": 0.00483346291760478,
+                                  "Germany": 0.5723021207901599,
+                                  "USA": 0.13391139538014957,
+                                  "United Kingdom": 0.2693404587310163
+                                },
+                                "entropy": 1.0762953579884973
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Africa": 0.0012315455628220038,
+                                  "Asia": 0.003347032314492034,
+                                  "Europe": 0.8246782636729763,
+                                  "North America": 0.1707431584497096
+                                },
+                                "entropy": 0.4880990579741554
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C21846T"
+                                ],
+                                "S": [
+                                  "T95I"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "S: T95I"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "OV120488",
+                                "node_attrs": {
+                                  "div": 0.0015054245837914418,
+                                  "num_date": {
+                                    "value": 2021.8424657534247
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OV120488",
+                                  "author": {
+                                    "author": "?",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                    "value": "? A"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "AY.126"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "21J (Delta)"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21J (Delta)"
+                                  },
+                                  "country": {
+                                    "value": "Germany",
+                                    "confidence": {
+                                      "Germany": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Europe": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C1758T",
+                                      "G5305T",
+                                      "T5731G",
+                                      "G9652T",
+                                      "T12862C",
+                                      "C14925T",
+                                      "A21137G",
+                                      "A21987G",
+                                      "A24110C",
+                                      "A25439C",
+                                      "T27539C",
+                                      "A29433G"
+                                    ],
+                                    "N": [
+                                      "K387R"
+                                    ],
+                                    "ORF1a": [
+                                      "A498V",
+                                      "L1680F",
+                                      "M3129I"
+                                    ],
+                                    "ORF1b": [
+                                      "K2557R"
+                                    ],
+                                    "ORF3a": [
+                                      "K16T"
+                                    ],
+                                    "ORF7a": [
+                                      "L49P"
+                                    ],
+                                    "S": [
+                                      "D142G",
+                                      "I850L"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: K387R; ORF1a: A498V, L1680F, M3129I; ORF1b: K2557R; ORF3a: K16T; ORF7a: L49P; S: D142G, I850L"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000011",
+                                "node_attrs": {
+                                  "div": 0.0011706211059406585,
+                                  "num_date": {
+                                    "value": 2021.5068330799959
+                                  },
+                                  "clade_membership": {
+                                    "value": "21J (Delta)"
+                                  },
+                                  "country": {
+                                    "value": "United Kingdom",
+                                    "confidence": {
+                                      "Germany": 0.06937769732766288,
+                                      "Switzerland": 0.0021328683159532592,
+                                      "USA": 0.029942723774537883,
+                                      "United Kingdom": 0.8904910442527467
+                                    },
+                                    "entropy": 0.4583073179969314
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Asia": 0.002766931475079049,
+                                      "Europe": 0.9196951503287014,
+                                      "North America": 0.0765393719527591
+                                    },
+                                    "entropy": 0.2968892572099936
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C7851T",
+                                      "T17040C"
+                                    ],
+                                    "ORF1a": [
+                                      "A2529V"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1a: A2529V"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "England/MILK-1D9E6D8/2021",
+                                    "node_attrs": {
+                                      "div": 0.0012709272983102593,
+                                      "num_date": {
+                                        "value": 2021.6780821917807
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU664365",
+                                      "author": {
+                                        "author": "The Lighthouse Lab in Milton et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                        "value": "The Lighthouse Lab in Milton et al"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "AY.4"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "21J (Delta)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "21J (Delta)"
+                                      },
+                                      "country": {
+                                        "value": "United Kingdom",
+                                        "confidence": {
+                                          "United Kingdom": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      },
+                                      "region": {
+                                        "value": "Europe",
+                                        "confidence": {
+                                          "Europe": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "A21360G",
+                                          "C21364T",
+                                          "C25844T"
+                                        ],
+                                        "ORF1b": [
+                                          "P2633S"
+                                        ],
+                                        "ORF3a": [
+                                          "T151I"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "ORF1b: P2633S; ORF3a: T151I"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "England/MILK-1F357FC/2021",
+                                    "node_attrs": {
+                                      "div": 0.0017396951871307945,
+                                      "num_date": {
+                                        "value": 2021.727397260274
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU770601",
+                                      "author": {
+                                        "author": "The Lighthouse Lab in Milton et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                        "value": "The Lighthouse Lab in Milton et al"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "AY.4"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "21J (Delta)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "21J (Delta)"
+                                      },
+                                      "country": {
+                                        "value": "United Kingdom",
+                                        "confidence": {
+                                          "United Kingdom": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      },
+                                      "region": {
+                                        "value": "Europe",
+                                        "confidence": {
+                                          "Europe": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C601T",
+                                          "A2342G",
+                                          "T6971C",
+                                          "C9246T",
+                                          "C13432T",
+                                          "C17004T",
+                                          "C17403T",
+                                          "G17592A",
+                                          "G20134T",
+                                          "C25487T",
+                                          "C25831T",
+                                          "G26217T",
+                                          "A27388G",
+                                          "A28795G",
+                                          "G29395C",
+                                          "C29675T",
+                                          "C29679T"
+                                        ],
+                                        "N": [
+                                          "K374N"
+                                        ],
+                                        "ORF1a": [
+                                          "I693V",
+                                          "A2994V"
+                                        ],
+                                        "ORF1b": [
+                                          "V2223L"
+                                        ],
+                                        "ORF3a": [
+                                          "T32I",
+                                          "L147F",
+                                          "L275F"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "N: K374N; ORF1a: I693V, A2994V; ORF1b: V2223L; ORF3a: T32I, L147F, L275F"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NODE_0000014",
+            "node_attrs": {
+              "div": 0.0002675018618837309,
+              "num_date": {
+                "value": 2020.5588588856608
+              },
+              "clade_membership": {
+                "value": "20B"
+              },
+              "country": {
+                "value": "USA",
+                "confidence": {
+                  "Germany": 0.21094523561699283,
+                  "Italy": 0.014730972304820202,
+                  "USA": 0.6604651006435299,
+                  "United Kingdom": 0.08338448930279321
+                },
+                "entropy": 1.0226805198950568
+              },
+              "region": {
+                "value": "North America",
+                "confidence": {
+                  "Africa": 0.0010842100118606804,
+                  "Asia": 0.003092963976491771,
+                  "Europe": 0.48236054216000573,
+                  "North America": 0.5134622838516417
+                },
+                "entropy": 0.719209332234208
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "A28271T",
+                  "G28881A",
+                  "G28882A",
+                  "G28883C"
+                ],
+                "N": [
+                  "R203K",
+                  "G204R"
+                ]
+              },
+              "labels": {
+                "aa": "N: R203K, G204R",
+                "clade": "20B"
+              }
+            },
+            "children": [
+              {
+                "name": "USA/TX-CDC-QDX27169041/2021",
+                "node_attrs": {
+                  "div": 0.001307205008410135,
+                  "num_date": {
+                    "value": 2021.5602739726028
+                  },
+                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/MZ798094",
+                  "author": {
+                    "author": "Howard et al",
+                    "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/TX-CDC-QDX27169041/2021 ORF1ab polyprotein (ORF1ab), ORF1a polyprotein (ORF1ab), surface glycoprotein (S), ORF3a protein (ORF3a), envelope protein (E), membrane glycoprotein (M), and ORF6 protein (ORF6) genes, complete cds; ORF7a gene, complete sequence; and ORF7b (ORF7b), ORF8 protein (ORF8), nucleocapsid phosphoprotein (N), and ORF10 protein (ORF10) genes, complete cds",
+                    "value": "Howard et al B"
+                  },
+                  "pango_lineage": {
+                    "value": "C.37"
+                  },
+                  "Nextstrain_clade": {
+                    "value": "21G (Lambda)"
+                  },
+                  "clade_membership": {
+                    "value": "21G (Lambda)"
+                  },
+                  "country": {
+                    "value": "USA",
+                    "confidence": {
+                      "USA": 1.0
+                    },
+                    "entropy": -1.000088900581841e-12
+                  },
+                  "region": {
+                    "value": "North America",
+                    "confidence": {
+                      "North America": 0.9999999999999999
+                    },
+                    "entropy": -9.99866855976916e-13
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "C4002T",
+                      "C7124T",
+                      "T7288G",
+                      "T7424G",
+                      "C9857T",
+                      "T9867C",
+                      "C10029T",
+                      "G10097A",
+                      "C13536T",
+                      "T14451C",
+                      "G14712T",
+                      "C21575T",
+                      "C21676T",
+                      "G21786T",
+                      "C21789T",
+                      "G22299-",
+                      "A22300-",
+                      "A22301-",
+                      "G22302-",
+                      "T22303-",
+                      "T22304-",
+                      "A22305-",
+                      "T22306-",
+                      "T22307-",
+                      "T22308-",
+                      "G22309-",
+                      "A22310-",
+                      "C22311-",
+                      "T22312-",
+                      "C22313-",
+                      "C22314-",
+                      "T22315-",
+                      "G22316-",
+                      "G22317-",
+                      "T22318-",
+                      "G22319-",
+                      "T22917A",
+                      "T23031C",
+                      "A23203G",
+                      "C23731T",
+                      "C24138A",
+                      "T26749C",
+                      "C26894T",
+                      "T27210C",
+                      "T27401C",
+                      "C27661T",
+                      "C28253T",
+                      "C28311T",
+                      "G28913T",
+                      "C29311T",
+                      "C29370T",
+                      "C29666T",
+                      "T29726-"
+                    ],
+                    "M": [
+                      "I76T"
+                    ],
+                    "N": [
+                      "P13L",
+                      "G214C",
+                      "T366I"
+                    ],
+                    "ORF1a": [
+                      "T1246I",
+                      "P2287S",
+                      "F2387V",
+                      "L3201P",
+                      "T3255I",
+                      "G3278S"
+                    ],
+                    "ORF7a": [
+                      "I3T",
+                      "Q90*"
+                    ],
+                    "ORF9b": [
+                      "P10S"
+                    ],
+                    "S": [
+                      "L5F",
+                      "G75V",
+                      "T76I",
+                      "R246X",
+                      "S247-",
+                      "Y248-",
+                      "L249-",
+                      "T250-",
+                      "P251-",
+                      "G252-",
+                      "D253X",
+                      "L452Q",
+                      "F490S",
+                      "T859N",
+                      "*1274X"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "M: I76T; N: P13L, G214C, T366I; ORF1a: T1246I, P2287S, F2387V, L3201P, T3255I, G3278S; ORF7a: I3T, Q90*; ORF9b: P10S; S: L5F, G75V, T76I, R246X, S247-, Y248-, L249-, T250-, P251-, G252-, D253X, L452Q, F490S, T859N, *1274X",
+                    "clade": "21G (Lambda)"
+                  }
+                }
+              },
+              {
+                "name": "NODE_0000015",
+                "node_attrs": {
+                  "div": 0.00033438465232522456,
+                  "num_date": {
+                    "value": 2020.601820367805
+                  },
+                  "clade_membership": {
+                    "value": "20B"
+                  },
+                  "country": {
+                    "value": "USA",
+                    "confidence": {
+                      "Denmark": 0.029911389693278518,
+                      "Germany": 0.3300900177783638,
+                      "USA": 0.43545928749114987,
+                      "United Kingdom": 0.176564437791073
+                    },
+                    "entropy": 1.283693142207436
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Africa": 0.0013359186071942998,
+                      "Asia": 0.0035788472977145566,
+                      "Europe": 0.6712737132922985,
+                      "North America": 0.3238115208027925
+                    },
+                    "entropy": 0.6616828736678197
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G21987-",
+                      "T21988-",
+                      "G21989-",
+                      "A23063T",
+                      "C23604A"
+                    ],
+                    "S": [
+                      "G142X",
+                      "V143X",
+                      "N501Y",
+                      "P681H",
+                      "*1274X"
+                    ]
+                  },
+                  "labels": {
+                    "aa": "S: G142X, V143X, N501Y, P681H, *1274X"
+                  }
+                },
+                "children": [
+                  {
+                    "name": "NODE_0000016",
+                    "node_attrs": {
+                      "div": 0.0009708832395320223,
+                      "num_date": {
+                        "value": 2021.0684304744716
+                      },
+                      "clade_membership": {
+                        "value": "21E (Theta)"
+                      },
+                      "country": {
+                        "value": "Germany",
+                        "confidence": {
+                          "Denmark": 0.009815248482406386,
+                          "Germany": 0.4748839244976954,
+                          "USA": 0.16751922390694812,
+                          "United Kingdom": 0.3243938304105307
+                        },
+                        "entropy": 1.1889866315790358
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Africa": 0.0011934870404392494,
+                          "Asia": 0.0032691514925880447,
+                          "Europe": 0.8595830014367634,
+                          "North America": 0.1359543600302093
+                        },
+                        "entropy": 0.42809322133165634
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "A4926G",
+                          "C7564A",
+                          "C8139T",
+                          "G9203A",
+                          "T9867C",
+                          "-11288T",
+                          "-11289C",
+                          "-11290T",
+                          "-11291G",
+                          "-11292G",
+                          "-11293T",
+                          "-11294T",
+                          "-11295T",
+                          "-11296T",
+                          "C11308A",
+                          "C12049T",
+                          "C12053T",
+                          "C17074T",
+                          "C17339T",
+                          "T21983-",
+                          "T21984-",
+                          "G21985-",
+                          "G21986-",
+                          "G22289-",
+                          "C22290-",
+                          "T22291-",
+                          "T22292-",
+                          "T22293-",
+                          "A22294-",
+                          "A22356G",
+                          "G23012A",
+                          "T23341C",
+                          "T24187A",
+                          "G24836A",
+                          "C24863T",
+                          "G25088T",
+                          "A27897C",
+                          "T28271-",
+                          "C29724T"
+                        ],
+                        "ORF1a": [
+                          "D1554G",
+                          "S2625F",
+                          "D2980N",
+                          "L3201P",
+                          "-3675S",
+                          "-3676G",
+                          "-3677F",
+                          "D3681E",
+                          "L3930F"
+                        ],
+                        "ORF1b": [
+                          "L1203F",
+                          "A1291V"
+                        ],
+                        "ORF8": [
+                          "K2Q"
+                        ],
+                        "S": [
+                          "L141-",
+                          "X142-",
+                          "A243-",
+                          "L244-",
+                          "Y265C",
+                          "E484K",
+                          "E1092K",
+                          "H1101Y",
+                          "V1176F"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "ORF1a: D1554G, S2625F, D2980N, L3201P, -3675S, -3676G, -3677F, D3681E, L3930F; ORF1b: L1203F, A1291V; ORF8: K2Q; S: L141-, X142-, A243-, L244-, Y265C, E484K, E1092K, H1101Y, V1176F",
+                        "clade": "21E (Theta)"
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "OU369623",
+                        "node_attrs": {
+                          "div": 0.0010713373227658432,
+                          "num_date": {
+                            "value": 2021.1575342465753
+                          },
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU369623",
+                          "author": {
+                            "author": "?",
+                            "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                            "value": "? A"
+                          },
+                          "pango_lineage": {
+                            "value": "P.3"
+                          },
+                          "Nextstrain_clade": {
+                            "value": "21E (Theta)"
+                          },
+                          "clade_membership": {
+                            "value": "21E (Theta)"
+                          },
+                          "country": {
+                            "value": "Germany",
+                            "confidence": {
+                              "Germany": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Europe": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C13536T",
+                              "T25316C",
+                              "G26062T"
+                            ],
+                            "ORF3a": [
+                              "G224C"
+                            ],
+                            "S": [
+                              "S1252P"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "ORF3a: G224C; S: S1252P"
+                          }
+                        }
+                      },
+                      {
+                        "name": "NODE_0000017",
+                        "node_attrs": {
+                          "div": 0.001071213313210067,
+                          "num_date": {
+                            "value": 2021.1630136996525
+                          },
+                          "clade_membership": {
+                            "value": "21E (Theta)"
+                          },
+                          "country": {
+                            "value": "United Kingdom",
+                            "confidence": {
+                              "Germany": 0.05890400221681817,
+                              "Switzerland": 0.0020623718823595282,
+                              "USA": 0.03237945088998084,
+                              "United Kingdom": 0.8984016867746356
+                            },
+                            "entropy": 0.4396636305880722
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Asia": 0.002743181259641535,
+                              "Europe": 0.9275195084093759,
+                              "North America": 0.0687547458025654
+                            },
+                            "entropy": 0.27684440200324983
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C12253T",
+                              "C20235A",
+                              "T21990-",
+                              "T21991-",
+                              "C29769T"
+                            ],
+                            "S": [
+                              "X143-",
+                              "X1274*"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "S: X143-, X1274*"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "England/CAMC-134E3F8/2021",
+                            "node_attrs": {
+                              "div": 0.001071213313210067,
+                              "num_date": {
+                                "value": 2021.16301369863
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU052368",
+                              "author": {
+                                "author": "Howes et al",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                "value": "Howes et al"
+                              },
+                              "pango_lineage": {
+                                "value": "P.3"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "21E (Theta)"
+                              },
+                              "clade_membership": {
+                                "value": "21E (Theta)"
+                              },
+                              "country": {
+                                "value": "United Kingdom",
+                                "confidence": {
+                                  "United Kingdom": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          },
+                          {
+                            "name": "England/CAMC-137AA67/2021",
+                            "node_attrs": {
+                              "div": 0.001071213313210067,
+                              "num_date": {
+                                "value": 2021.168493150685
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OU089195",
+                              "author": {
+                                "author": "Howes et al",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                "value": "Howes et al"
+                              },
+                              "pango_lineage": {
+                                "value": "P.3"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "21E (Theta)"
+                              },
+                              "clade_membership": {
+                                "value": "21E (Theta)"
+                              },
+                              "country": {
+                                "value": "United Kingdom",
+                                "confidence": {
+                                  "United Kingdom": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "NODE_0000018",
+                    "node_attrs": {
+                      "div": 0.001374423970010475,
+                      "num_date": {
+                        "value": 2021.4677331478067
+                      },
+                      "clade_membership": {
+                        "value": "21M (Omicron)"
+                      },
+                      "country": {
+                        "value": "USA",
+                        "confidence": {
+                          "Denmark": 0.09503155404633029,
+                          "Germany": 0.2952093824784981,
+                          "USA": 0.43471271347219526,
+                          "United Kingdom": 0.14408233532921882
+                        },
+                        "entropy": 1.3825213582439275
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Africa": 0.0013118354226021108,
+                          "Asia": 0.003471308227653322,
+                          "Europe": 0.6872998127188327,
+                          "North America": 0.3079170436309119
+                        },
+                        "entropy": 0.6487946050760418
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "A2832G",
+                          "T5386G",
+                          "G6513-",
+                          "T6514-",
+                          "T6515-",
+                          "C10029T",
+                          "C10449A",
+                          "A18163G",
+                          "G22578A",
+                          "C22674T",
+                          "T22679C",
+                          "C22686T",
+                          "G22813T",
+                          "T22882G",
+                          "G22992A",
+                          "C22995A",
+                          "A23013C",
+                          "A23040G",
+                          "A23055G",
+                          "T23075C",
+                          "C23525T",
+                          "T23599G",
+                          "C23854A",
+                          "G23948T",
+                          "A24424T",
+                          "T24469A",
+                          "C25000T",
+                          "C25584T",
+                          "C26270T",
+                          "C26577G",
+                          "G26709A",
+                          "A27259C",
+                          "C27807T",
+                          "C28311T",
+                          "G28362-",
+                          "A28363-",
+                          "G28364-",
+                          "A28365-",
+                          "A28366-",
+                          "C28367-",
+                          "G28368-",
+                          "C28369-",
+                          "A28370-"
+                        ],
+                        "E": [
+                          "T9I"
+                        ],
+                        "M": [
+                          "Q19E",
+                          "A63T"
+                        ],
+                        "N": [
+                          "P13L",
+                          "G30X",
+                          "E31-",
+                          "R32-",
+                          "S33X",
+                          "*420X"
+                        ],
+                        "ORF1a": [
+                          "K856R",
+                          "S2083X",
+                          "L2084X",
+                          "T3255I",
+                          "P3395H"
+                        ],
+                        "ORF1b": [
+                          "I1566V"
+                        ],
+                        "ORF9b": [
+                          "P10S",
+                          "E27-",
+                          "N28-",
+                          "A29-"
+                        ],
+                        "S": [
+                          "G339D",
+                          "S371F",
+                          "S373P",
+                          "S375F",
+                          "K417N",
+                          "N440K",
+                          "S477N",
+                          "T478K",
+                          "E484A",
+                          "Q493R",
+                          "Q498R",
+                          "Y505H",
+                          "H655Y",
+                          "N679K",
+                          "N764K",
+                          "D796Y",
+                          "Q954H",
+                          "N969K"
+                        ]
+                      },
+                      "labels": {
+                        "aa": "E: T9I; M: Q19E, A63T; N: P13L, G30X, E31-, R32-, S33X, *420X; ORF1a: K856R, S2083X, L2084X, T3255I, P3395H; ORF1b: I1566V; ORF9b: P10S, E27-, N28-, A29-; S: G339D, S371F, S373P, S375F, K417N, N440K, S477N, T478K, E484A, Q493R, Q498R, Y505H, H655Y, N679K, N764K, D796Y, Q954H, N969K",
+                        "clade": "21M (Omicron)"
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "NODE_0000019",
+                        "node_attrs": {
+                          "div": 0.0019110318767329225,
+                          "num_date": {
+                            "value": 2021.8406526563297
+                          },
+                          "clade_membership": {
+                            "value": "21L (Omicron)"
+                          },
+                          "country": {
+                            "value": "USA",
+                            "confidence": {
+                              "Denmark": 0.4009912638904844,
+                              "Germany": 0.08561230508791966,
+                              "USA": 0.43217568675405554,
+                              "United Kingdom": 0.05320297575560718
+                            },
+                            "entropy": 1.2406751187468217
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Africa": 0.0012270307841015001,
+                              "Asia": 0.0030237481013097194,
+                              "Europe": 0.6792733307001143,
+                              "North America": 0.31647589041447455
+                            },
+                            "entropy": 0.6525711553024979
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C12880T",
+                              "C15714T",
+                              "C17410T",
+                              "C19955T",
+                              "A20055G",
+                              "C21618T",
+                              "T21633-",
+                              "A21634-",
+                              "C21635-",
+                              "C21636-",
+                              "C21637-",
+                              "C21638-",
+                              "C21639-",
+                              "T21640-",
+                              "G21641-",
+                              "-21987A",
+                              "-21988T",
+                              "-21989G",
+                              "T22200G",
+                              "A22688G",
+                              "G22775A",
+                              "A22786C",
+                              "C26060T",
+                              "C26858T",
+                              "G27382C",
+                              "A27383T",
+                              "T27384C",
+                              "A29510C",
+                              "G29734-",
+                              "A29735-",
+                              "G29736-",
+                              "G29737-",
+                              "C29738-",
+                              "C29739-",
+                              "A29740-",
+                              "C29741-",
+                              "G29742-",
+                              "C29743-",
+                              "G29744-",
+                              "G29745-",
+                              "A29746-",
+                              "G29747-",
+                              "T29748-",
+                              "A29749-",
+                              "C29750-",
+                              "G29751-",
+                              "A29752-",
+                              "T29753-",
+                              "C29754-",
+                              "G29755-",
+                              "A29756-",
+                              "G29757-",
+                              "T29758-",
+                              "G29759-"
+                            ],
+                            "N": [
+                              "S413R"
+                            ],
+                            "ORF1b": [
+                              "R1315C",
+                              "T2163I"
+                            ],
+                            "ORF3a": [
+                              "T223I"
+                            ],
+                            "ORF6": [
+                              "D61L"
+                            ],
+                            "S": [
+                              "T19I",
+                              "L24X",
+                              "P25-",
+                              "P26-",
+                              "A27X",
+                              "X142D",
+                              "X143V",
+                              "V213G",
+                              "T376A",
+                              "D405N",
+                              "R408S"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "N: S413R; ORF1b: R1315C, T2163I; ORF3a: T223I; ORF6: D61L; S: T19I, L24X, P25-, P26-, A27X, X142D, X143V, V213G, T376A, D405N, R408S",
+                            "clade": "21L (Omicron)"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "Denmark/DCGC-500283/2022",
+                            "node_attrs": {
+                              "div": 0.002280073233882342,
+                              "num_date": {
+                                "value": 2022.3027397260273
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OX185317",
+                              "author": {
+                                "author": "Danish Covid-19 Genome et al",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                "value": "Danish Covid-19 Genome et al"
+                              },
+                              "pango_lineage": {
+                                "value": "XH"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "recombinant"
+                              },
+                              "clade_membership": {
+                                "value": "21L (Omicron)"
+                              },
+                              "country": {
+                                "value": "Denmark",
+                                "confidence": {
+                                  "Denmark": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T902C",
+                                  "C904A",
+                                  "G1244A",
+                                  "G8393A",
+                                  "C9943T",
+                                  "T17106C",
+                                  "C22792T",
+                                  "C25624T",
+                                  "C25693A",
+                                  "C28435T",
+                                  "C29627T"
+                                ],
+                                "ORF1a": [
+                                  "C213R",
+                                  "G327S",
+                                  "A2710T"
+                                ],
+                                "ORF3a": [
+                                  "H78Y",
+                                  "L101I"
+                                ],
+                                "ORF9b": [
+                                  "P51L"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: C213R, G327S, A2710T; ORF3a: H78Y, L101I; ORF9b: P51L"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000020",
+                            "node_attrs": {
+                              "div": 0.0022125600444675548,
+                              "num_date": {
+                                "value": 2022.0294389218627
+                              },
+                              "clade_membership": {
+                                "value": "21L (Omicron)"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "Denmark": 0.2627161739243169,
+                                  "Germany": 0.029019473528298766,
+                                  "USA": 0.6706376257422011,
+                                  "United Kingdom": 0.02303710053670209
+                                },
+                                "entropy": 0.8937050284035247
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "Asia": 0.002088292690213036,
+                                  "Europe": 0.3530226395939407,
+                                  "North America": 0.6439305767847161
+                                },
+                                "entropy": 0.670559976084659
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "G4184A",
+                                  "C4321T",
+                                  "G5386T",
+                                  "-6513G",
+                                  "-6514T",
+                                  "-6515T",
+                                  "C9344T",
+                                  "A9424G",
+                                  "C9534T",
+                                  "C9866T",
+                                  "C10198T",
+                                  "G10447A"
+                                ],
+                                "ORF1a": [
+                                  "G1307S",
+                                  "X2083S",
+                                  "X2084L",
+                                  "L3027F",
+                                  "T3090I",
+                                  "L3201F"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: G1307S, X2083S, X2084L, L3027F, T3090I, L3201F"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "USA/MI-CDC-STM-34K55B4PU/2022",
+                                "node_attrs": {
+                                  "div": 0.0022795309544878495,
+                                  "num_date": {
+                                    "value": 2022.2780821917809
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/ON388949",
+                                  "author": {
+                                    "author": "Howard et al",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/MI-CDC-STM-34K55B4PU/2022, complete genome",
+                                    "value": "Howard et al C"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "BA.2"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "recombinant"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21L (Omicron)"
+                                  },
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T22686C",
+                                      "G22688A"
+                                    ],
+                                    "S": [
+                                      "F375S",
+                                      "A376T"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "S: F375S, A376T"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000021",
+                                "node_attrs": {
+                                  "div": 0.0023130227287256875,
+                                  "num_date": {
+                                    "value": 2022.061521187821
+                                  },
+                                  "clade_membership": {
+                                    "value": "21L (Omicron)"
+                                  },
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "Denmark": 0.3379677992335057,
+                                      "Germany": 0.018470016990815075,
+                                      "USA": 0.6112912344840961,
+                                      "United Kingdom": 0.01718395652853831
+                                    },
+                                    "entropy": 0.8984263535968061
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "Asia": 0.0020561806602028944,
+                                      "Europe": 0.4142890388036111,
+                                      "North America": 0.5826833752657017
+                                    },
+                                    "entropy": 0.6992416353970422
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "T670G",
+                                      "C2790T",
+                                      "G2832A"
+                                    ],
+                                    "ORF1a": [
+                                      "S135R",
+                                      "T842I",
+                                      "R856K"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "ORF1a: S135R, T842I, R856K"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "Denmark/DCGC-406529/2022",
+                                    "node_attrs": {
+                                      "div": 0.0025475153157963983,
+                                      "num_date": {
+                                        "value": 2022.1657534246576
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OX042044",
+                                      "author": {
+                                        "author": "Danish Covid-19 Genome et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                        "value": "Danish Covid-19 Genome et al"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "BA.2.9"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "21L (Omicron)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "21L (Omicron)"
+                                      },
+                                      "country": {
+                                        "value": "Denmark",
+                                        "confidence": {
+                                          "Denmark": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      },
+                                      "region": {
+                                        "value": "Europe",
+                                        "confidence": {
+                                          "Europe": 0.9999999999999999
+                                        },
+                                        "entropy": -9.99866855976916e-13
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C6555T",
+                                          "T14064C",
+                                          "G18318T",
+                                          "C18687T",
+                                          "-21633T",
+                                          "-21634A",
+                                          "-21635C",
+                                          "-21636C",
+                                          "-21637C",
+                                          "-21638C",
+                                          "-21639C",
+                                          "-21640T",
+                                          "-21641G",
+                                          "C22792T",
+                                          "C25624T",
+                                          "G28436T"
+                                        ],
+                                        "N": [
+                                          "A55S"
+                                        ],
+                                        "ORF1a": [
+                                          "A2097V"
+                                        ],
+                                        "ORF3a": [
+                                          "H78Y"
+                                        ],
+                                        "S": [
+                                          "X24L",
+                                          "-25P",
+                                          "-26P",
+                                          "X27A",
+                                          "X1274*"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "N: A55S; ORF1a: A2097V; ORF3a: H78Y; S: X24L, -25P, -26P, X27A, X1274*"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "USA/CT-CDC-LC0645404/2022",
+                                    "node_attrs": {
+                                      "div": 0.0028497462620959,
+                                      "num_date": {
+                                        "value": 2022.36301369863
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/ON625246",
+                                      "author": {
+                                        "author": "Howard et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CT-CDC-LC0645404/2022 ORF1ab polyprotein (ORF1ab), ORF1a polyprotein (ORF1ab), surface glycoprotein (S), ORF3a protein (ORF3a), envelope protein (E), membrane glycoprotein (M), ORF6 protein (ORF6), ORF7a protein (ORF7a), and ORF7b (ORF7b) genes, complete cds; ORF8 gene, complete sequence; and nucleocapsid phosphoprotein (N) gene, complete cds",
+                                        "value": "Howard et al D"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "BA.2.12.1"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "22C (Omicron)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "22C (Omicron)"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 0.9999999999999999
+                                        },
+                                        "entropy": -9.99866855976916e-13
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G1247A",
+                                          "T11522G",
+                                          "C11575T",
+                                          "C11674T",
+                                          "T15009C",
+                                          "C16092T",
+                                          "C16362T",
+                                          "T16728C",
+                                          "G18462A",
+                                          "C21721T",
+                                          "T22917A",
+                                          "C23673T",
+                                          "C25240T",
+                                          "C25416T",
+                                          "C25521T",
+                                          "C27945T"
+                                        ],
+                                        "ORF1a": [
+                                          "E328K",
+                                          "F3753V"
+                                        ],
+                                        "ORF8": [
+                                          "Q18*"
+                                        ],
+                                        "S": [
+                                          "L452Q",
+                                          "S704L"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "ORF1a: E328K, F3753V; ORF8: Q18*; S: L452Q, S704L",
+                                        "clade": "22C (Omicron)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000022",
+                        "node_attrs": {
+                          "div": 0.001809887749423954,
+                          "num_date": {
+                            "value": 2021.9481938410145
+                          },
+                          "clade_membership": {
+                            "value": "21K (Omicron)"
+                          },
+                          "country": {
+                            "value": "Germany",
+                            "confidence": {
+                              "Denmark": 0.023712538410479933,
+                              "Germany": 0.4252236727422194,
+                              "USA": 0.3443887889614995,
+                              "United Kingdom": 0.18503862779357624
+                            },
+                            "entropy": 1.2494142754451734
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Africa": 0.0010946501855578,
+                              "Asia": 0.0027797298685715665,
+                              "Europe": 0.7376839520548616,
+                              "North America": 0.2584416678910091
+                            },
+                            "entropy": 0.5979488351961457
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "G8393A",
+                              "T11285-",
+                              "T11286-",
+                              "G11287-",
+                              "-11294T",
+                              "-11295T",
+                              "-11296T",
+                              "A11537G",
+                              "T13195C",
+                              "C15240T",
+                              "C21762T",
+                              "T21765-",
+                              "A21766-",
+                              "C21767-",
+                              "A21768-",
+                              "T21769-",
+                              "G21770-",
+                              "C21846T",
+                              "T21990-",
+                              "T21991-",
+                              "T21992-",
+                              "A21993-",
+                              "T21994-",
+                              "T21995-",
+                              "A22194-",
+                              "T22195-",
+                              "T22196-",
+                              "T22673C",
+                              "G22898A",
+                              "G23048A",
+                              "C23202A",
+                              "C24130A",
+                              "C24503T",
+                              "A26530G"
+                            ],
+                            "M": [
+                              "D3G"
+                            ],
+                            "ORF1a": [
+                              "A2710T",
+                              "L3674-",
+                              "-3677F",
+                              "I3758V"
+                            ],
+                            "S": [
+                              "A67V",
+                              "I68X",
+                              "H69-",
+                              "V70X",
+                              "T95I",
+                              "X143-",
+                              "Y144-",
+                              "Y145X",
+                              "N211X",
+                              "L212X",
+                              "F371L",
+                              "G446S",
+                              "G496S",
+                              "T547K",
+                              "N856K",
+                              "L981F"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "M: D3G; ORF1a: A2710T, L3674-, -3677F, I3758V; S: A67V, I68X, H69-, V70X, T95I, X143-, Y144-, Y145X, N211X, L212X, F371L, G446S, G496S, T547K, N856K, L981F",
+                            "clade": "21K (Omicron)"
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "OW582337",
+                            "node_attrs": {
+                              "div": 0.0018768267130009285,
+                              "num_date": {
+                                "value": 2022.1383561643836
+                              },
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/OW582337",
+                              "author": {
+                                "author": "?",
+                                "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                "value": "? A"
+                              },
+                              "pango_lineage": {
+                                "value": "BA.1.21"
+                              },
+                              "Nextstrain_clade": {
+                                "value": "21K (Omicron)"
+                              },
+                              "clade_membership": {
+                                "value": "21K (Omicron)"
+                              },
+                              "country": {
+                                "value": "Germany",
+                                "confidence": {
+                                  "Germany": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C6555T",
+                                  "G27762T"
+                                ],
+                                "ORF1a": [
+                                  "A2097V"
+                                ],
+                                "ORF7b": [
+                                  "E3*"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "ORF1a: A2097V; ORF7b: E3*"
+                              }
+                            }
+                          },
+                          {
+                            "name": "NODE_0000023",
+                            "node_attrs": {
+                              "div": 0.0018768227846614955,
+                              "num_date": {
+                                "value": 2022.0247127149107
+                              },
+                              "clade_membership": {
+                                "value": "21K (Omicron)"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "Denmark": 0.0027629080939654987,
+                                  "Germany": 0.07136433204556814,
+                                  "USA": 0.5075661863831715,
+                                  "United Kingdom": 0.4143217098792316
+                                },
+                                "entropy": 0.9423391973678856
+                              },
+                              "region": {
+                                "value": "Europe",
+                                "confidence": {
+                                  "Europe": 0.5488413248712064,
+                                  "North America": 0.45048043035534063
+                                },
+                                "entropy": 0.693840042267274
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "C2470T",
+                                  "G22599A"
+                                ],
+                                "S": [
+                                  "R346K"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "S: R346K"
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "USA/MA-CDCBI-CRSP_55LR3T3UFKSUZ56Q/2022",
+                                "node_attrs": {
+                                  "div": 0.002010775481587369,
+                                  "num_date": {
+                                    "value": 2022.0561643835617
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OM508767",
+                                  "author": {
+                                    "author": "Lemieux et al",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/MA-CDCBI-CRSP_55LR3T3UFKSUZ56Q/2022 ORF1ab polyprotein (ORF1ab), ORF1a polyprotein (ORF1ab), surface glycoprotein (S), ORF3a protein (ORF3a), envelope protein (E), membrane glycoprotein (M), ORF6 protein (ORF6), ORF7a protein (ORF7a), ORF7b (ORF7b), ORF8 protein (ORF8), nucleocapsid phosphoprotein (N), and ORF10 protein (ORF10) genes, complete cds",
+                                    "value": "Lemieux et al"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "BA.1.1"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "21K (Omicron)"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21K (Omicron)"
+                                  },
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "A10323G",
+                                      "A14940G",
+                                      "G26803C",
+                                      "T29685C"
+                                    ],
+                                    "M": [
+                                      "S94T"
+                                    ],
+                                    "ORF1a": [
+                                      "K3353R"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "M: S94T; ORF1a: K3353R"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "England/MILK-3759633/2022",
+                                "node_attrs": {
+                                  "div": 0.0020443133055200883,
+                                  "num_date": {
+                                    "value": 2022.1301369863013
+                                  },
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/OW026638",
+                                  "author": {
+                                    "author": "The Lighthouse Lab in Milton et al",
+                                    "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                    "value": "The Lighthouse Lab in Milton et al"
+                                  },
+                                  "pango_lineage": {
+                                    "value": "BA.1.1"
+                                  },
+                                  "Nextstrain_clade": {
+                                    "value": "21K (Omicron)"
+                                  },
+                                  "clade_membership": {
+                                    "value": "21K (Omicron)"
+                                  },
+                                  "country": {
+                                    "value": "United Kingdom",
+                                    "confidence": {
+                                      "United Kingdom": 1.0
+                                    },
+                                    "entropy": -1.000088900581841e-12
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Europe": 0.9999999999999999
+                                    },
+                                    "entropy": -9.99866855976916e-13
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "C1201T",
+                                      "G11083T",
+                                      "C21575T",
+                                      "G28374A",
+                                      "C29137T"
+                                    ],
+                                    "N": [
+                                      "G34E"
+                                    ],
+                                    "ORF1a": [
+                                      "L3606F"
+                                    ],
+                                    "ORF9b": [
+                                      "G31R"
+                                    ],
+                                    "S": [
+                                      "L5F"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "N: G34E; ORF1a: L3606F; ORF9b: G31R; S: L5F"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000024",
+                                "node_attrs": {
+                                  "div": 0.0018768227846614955,
+                                  "num_date": {
+                                    "value": 2022.0555385843045
+                                  },
+                                  "clade_membership": {
+                                    "value": "21K (Omicron)"
+                                  },
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "Denmark": 0.004475053447543336,
+                                      "Germany": 0.0387380009077477,
+                                      "USA": 0.49606936779952066,
+                                      "United Kingdom": 0.4500345406460126
+                                    },
+                                    "entropy": 0.9228017597753327
+                                  },
+                                  "region": {
+                                    "value": "Europe",
+                                    "confidence": {
+                                      "Asia": 0.0020802994020736104,
+                                      "Europe": 0.5106987682042695,
+                                      "North America": 0.4862664823198325
+                                    },
+                                    "entropy": 0.7132583448731951
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "USA/NJ-CDC-LC0588158/2022",
+                                    "node_attrs": {
+                                      "div": 0.0020777452665030815,
+                                      "num_date": {
+                                        "value": 2022.3
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/ON397650",
+                                      "author": {
+                                        "author": "Howard et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/NJ-CDC-LC0588158/2022, complete genome",
+                                        "value": "Howard et al E"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "BA.1.1"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "21K (Omicron)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "21K (Omicron)"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "T523A",
+                                          "T3306C",
+                                          "A5538G",
+                                          "T14133C",
+                                          "G18340A",
+                                          "C21595T"
+                                        ],
+                                        "ORF1a": [
+                                          "M1014T",
+                                          "Q1758R"
+                                        ],
+                                        "ORF1b": [
+                                          "V1625I"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "ORF1a: M1014T, Q1758R; ORF1b: V1625I"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "England/QEUH-3885FAB/2022",
+                                    "node_attrs": {
+                                      "div": 0.0018768227846614955,
+                                      "num_date": {
+                                        "value": 2022.1520547945206
+                                      },
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/OW132524",
+                                      "author": {
+                                        "author": "VanSteenhouse et al",
+                                        "title": "Severe acute respiratory syndrome coronavirus 2 genome assembly, chromosome: 1",
+                                        "value": "VanSteenhouse et al"
+                                      },
+                                      "pango_lineage": {
+                                        "value": "Unassigned"
+                                      },
+                                      "Nextstrain_clade": {
+                                        "value": "21M (Omicron)"
+                                      },
+                                      "clade_membership": {
+                                        "value": "21K (Omicron)"
+                                      },
+                                      "country": {
+                                        "value": "United Kingdom",
+                                        "confidence": {
+                                          "United Kingdom": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      },
+                                      "region": {
+                                        "value": "Europe",
+                                        "confidence": {
+                                          "Europe": 1.0
+                                        },
+                                        "entropy": -1.000088900581841e-12
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
