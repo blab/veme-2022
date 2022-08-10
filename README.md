@@ -27,11 +27,9 @@ By the end of this workshop, attendees will know how to:
 
 At the beginning of the SARS-CoV-2 pandemic, we knew little about this specific new virus, but we did have previous knowledge from SARS-CoV-1 and MERS-CoV outbreaks and a handful of complete SARS-CoV-2 genomes and metadata.
 Together, these data and previous knowledge allowed the Nextstrain team to prepare [a situation report documenting the state of the pandemic at its earliest stages](https://nextstrain.org/narratives/ncov/sit-rep/2020-01-23).
+[A phylogenetic tree with 24 genomes](https://nextstrain.org/narratives/ncov/sit-rep/2020-01-23?n=5) strongly suggested that this new virus could transmit efficiently between humans and quickly across geographic regions.
 [Genomic epidemiology enabled detection of community spread in the Seattle area early in the pandemic](https://nextstrain.org/narratives/ncov/sit-rep/2020-03-05?n=10) before anyone was aware that SARS-CoV-2 was already so widespread in the community.
 These tools have been a key component of New Zealand's pandemic response, as documented in [a Nextstrain narrative describing specific outbreaks in New Zealand](https://nextstrain.org/community/narratives/ESR-NZ/GenomicsNarrativeSARSCoV2/aotearoa-border-incursions).
-
-To produce "real-time" analyses, Nextstrain relies on maximum likelihood methods.
-Even if you plan to use Bayesian methods, Nextstrain's tools enable rapid prototyping of subsampled datasets to use in subsequent Bayesian analyses.
 
 ### How do we use Nextstrain to perform genomic epidemiology analyses?
 
@@ -44,22 +42,29 @@ The process for creating a Nextstrain analysis generally requires the following 
   - Analyze data.
     - Run commands manually or in a workflow.
     - Run commands locally or in the cloud.
-    - We will focus on how to run commands and understand their inputs and outputs.
+    - Here, we will focus on how to run commands and understand their inputs and outputs.
   - Visualize and interpret analysis outputs.
-    - Run a local Auspice server.
+    - Run a local [Auspice](https://docs.nextstrain.org/projects/auspice/en/stable/) server.
     - Drag-and-drop onto [auspice.us](http://auspice.us).
     - Upload data to GitHub or Nextstrain Groups and view through [nextstrain.org](http://nextstrain.org).
 
-In this workshop, you will learn how to analyze previously curated data and then visualize and interpret the resulting annotated phylogenetic tree.
+In this tutorial, you will learn how to analyze previously curated data and then visualize and interpret the resulting annotated phylogenetic tree.
 
 ## Build an annotated time-scaled phylogeny of SARS-CoV-2
 
-Inspect input files for SARS-CoV-2 analysis.
+To start, we will inspect the input files for SARS-CoV-2 analysis.
 We will use a curated reference genome and annotations from Nextclade.
-Inspect the contents of the reference genome FASTA and the gene map with genomic coordinates in [GFF format](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
+[See the data curation guide](data/README.md) for more details.
+
+Inspect the contents of the reference genome [FASTA](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/).
 
 ``` bash
 head data/reference.fasta
+```
+
+Then, check out the gene map with genomic coordinates in [GFF format](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
+
+``` bash
 head data/genemap.gff
 ```
 
@@ -78,8 +83,8 @@ Note that Nextstrain also supports VCF files, as an alternate representation of 
 
 Genome metadata have:
 
-  - One tab-delimited record per genome sequence with a “strain” name that matches the genome sequence name.
-  - Required columns including “strain” and “date”.
+  - One tab-delimited record per genome sequence with a "strain" name that matches the genome sequence name.
+  - Required columns including "strain" and "date".
   - As many additional columns as you like.
 
 ``` bash
@@ -133,7 +138,7 @@ head results/sequence_index.tsv
 ```
 
 Filter the data to eliminate low-quality or undesired data based on genome sequence or metadata attributes.
-In the following command, we filter by date, sequence length, a query on the metadata attributes, and an explicit list of strains to exclude.
+In the following command, we filter by date and sequence length.
 We also force the inclusion of reference records that we will need for rooting the tree later.
 
 ``` bash
@@ -176,7 +181,7 @@ augur filter \
 Next, we align the genome sequences of our subsampled data to a single reference genome.
 This alignment ensures that all genomes have the same coordinates during tree inference.
 
-> Note: Although we use a reference-based alignment with Nextalign here, you may want to perform a multiple sequence alignment with augur align, depending on your pathogen.
+> Note: Although we use a reference-based alignment with Nextalign below, you may want to perform a multiple sequence alignment with augur align, depending on your pathogen.
 >
 > ```bash
 > augur align \
@@ -188,7 +193,7 @@ This alignment ensures that all genomes have the same coordinates during tree in
 > ```
 
 Nextalign produces both an alignment of the nucleotide sequences and amino acid alignments for all genes defined in the given gene map.
-Insertions relative to the reference genome appear in an optional comma-separated values (CSV) output.
+Insertions relative to the reference genome and error messages appear in optional comma-separated values (CSV) outputs.
 
 ``` bash
 nextalign run \
@@ -213,7 +218,7 @@ augur tree \
 
 We can view this tree and its metadata in [auspice.us](https://auspice.us/) or FigTree.
 
-> Note: All tree builders used by Augur are maximum-likelihood (ML) tools, enabling the “real-time” part of Nextstrain’s mission at the expense of the posterior and more sophisticated models available through Bayesian methods.
+> Note: All tree builders used by Augur are maximum-likelihood (ML) tools, enabling the "real-time" part of Nextstrain’s mission at the expense of the posterior and more sophisticated models available through Bayesian methods.
 > The ML approach enables rapid prototyping to identify genomes to include in a more complex, longer-running Bayesian analysis.
 
 With the alignment, the divergence tree, and the dates per sample from the metadata, we can infer a time-scaled phylogeny with estimated dates for internal nodes of the tree.
@@ -233,7 +238,8 @@ augur refine \
 
 This is the first part of the workflow that produces a "node data JSON" output file.
 We will see more of these in subsequent steps.
-The node data JSON file is a Nextstrain-specific file standard that stores key/value attributes per node in the phylogenetic tree like clock-scale branch lengths, inferred collection dates, etc.
+The node data JSON file is a Nextstrain-specific file standard that stores key/value attributes per node in the phylogenetic tree.
+Example attributes include clock-scale branch lengths, inferred collection dates, and inferred nucleotide sequences for ancestral nodes.
 Unlike the divergence tree builders, `augur refine` names internal nodes (e.g., NODE_0000000) so we can reference them in other downstream tools.
 
 ``` bash
@@ -312,7 +318,7 @@ less results/clades.json
 In a similar way that we infer the ancestral nucleotides for each node in the tree at each position of the alignment, we can infer the ancestral states for other discrete traits available in the metadata.
 The `augur traits` subcommand is a lightweight wrapper around TreeTime that performs discrete trait analysis (DTA) on columns in the given metadata.
 The command assigns the most likely ancestral states to named internal nodes and tips missing values for those states (i.e., samples for which metadata columns contain "?" values) and optionally produces confidence values per possible state.
-The following command infers ancestral country and region.
+The following command infers ancestral country and region with confidence values.
 
 ``` bash
 augur traits \
