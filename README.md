@@ -457,7 +457,7 @@ This filters the data to the most recent strains, revealing a couple of dozen ca
 This view reveals that we actually don't have division-level information for these recent strains.
 ["Reset" the date filter to confirm that many strains do have division-level information](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=division&d=map,frequencies&f_country=Kenya&f_region=Africa&p=full&r=division).
 
-[Color by genotype at S:681 again and drag the date slider from the right handle back to the beginning of 2020](https://nextstrain.org/ncov/gisaid/africa/2021-09-01?c=gt-S_681&d=map,frequencies&dmax=2020-02-08&f_country=Kenya&f_region=Africa&p=full&r=division) or enter "09 / 01 / 2020" after first clicking on the end date below the slider.
+[Color by genotype at S:681 again and drag the date slider from the right handle back to the beginning of 2020](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=map,frequencies&dmax=2020-02-01&f_country=Kenya&f_region=Africa&p=full&r=division) or enter "02 / 01 / 2020" after first clicking on the end date below the slider.
 Then, drag the left handle of the slider slowly to the right and watch the map.
 This view allows you to filter the strains by time on the map view, showing when and where cases of a specific genotype first emerged.
 This requires manual intervention with Nextstrain.
