@@ -387,6 +387,8 @@ auspice view --datasetDir auspice/
 
 > Note that while the following instructions describe a specific Nextstrain analysis, the same general steps will apply to any pathogen tree.
 
+See also, [the example SARS-CoV-2 tree produced by the analysis above](https://nextstrain.org/community/blab/veme-2022/example-ncov).
+
 ### Layout
 
 Open [the Nextstrain build for SARS-CoV-2 in Africa as of September 2021](https://nextstrain.org/ncov/gisaid/africa/2021-09-03) and note layout of Auspice:
