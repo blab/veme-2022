@@ -377,7 +377,9 @@ augur frequencies \
   --output auspice/ncov_tip-frequencies.json
 ```
 
-To visualize the final tree and frequencies, we can drag these files together onto the [auspice.us](http://auspice.us) landing page or we can run a local Auspice server with the following command.
+To visualize the final tree and frequencies, we can drag these files together onto the [auspice.us](http://auspice.us) landing page. If you are working from a Binder interface, download all of the files in the `auspice/` directory to your computer, open a file explorer/finder window, and drag all of the files on to the auspice.us interface.
+
+If you have Auspice installed locally, you can run a local Auspice server with the following command.
 
 ``` bash
 auspice view --datasetDir auspice/
