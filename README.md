@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-  - [Install Nextstrain]() on your computer or launch one of the virtual machine providers listed above.
+  - [Install Nextstrain](https://docs.nextstrain.org/en/latest/install.html) on your computer or launch one of the virtual machine providers listed above.
 
 ## Scope
 
