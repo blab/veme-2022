@@ -1,11 +1,16 @@
 # Workshop for VEME 2022
 
+## Prerequisites
+
+If you want to use a preconfigured environment, you only need to launch one of the following virtual machine providers.
+
 [![Open with Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/blab/veme-2022/HEAD)
 [![Open with Gitpod](https://img.shields.io/badge/Open%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/blab/veme-2022.git)
 
-## Prerequisites
+If you want to use your local environment on your personal computer, you will need to:
 
   - [Install Nextstrain](https://docs.nextstrain.org/en/latest/install.html) on your computer or launch one of the virtual machine providers listed above.
+  - Clone this repository with `git clone https://github.com/blab/veme-2022.git` and change into the resulting `veme-2022` directory.
 
 ## Scope
 
@@ -123,21 +128,7 @@ augur -h
 Look at the help text for a specific Augur subcommand.
 
 ``` bash
-augur index -h
-```
-
-Index genome sequences, calculating statistics across each genome.
-
-``` bash
-augur index \
-  --sequences data/sequences.fasta \
-  --output results/sequence_index.tsv
-```
-
-Inspect the sequence index.
-
-``` bash
-head results/sequence_index.tsv
+augur filter -h
 ```
 
 Filter the data to eliminate low-quality or undesired data based on genome sequence or metadata attributes.
@@ -148,7 +139,6 @@ We also force the inclusion of reference records that we will need for rooting t
 augur filter \
   --metadata data/metadata.tsv \
   --sequences data/sequences.fasta \
-  --sequence-index results/sequence_index.tsv \
   --include config/include.txt \
   --min-date 2021-01-01 \
   --min-length 27000 \
@@ -201,11 +191,7 @@ Insertions relative to the reference genome and error messages appear in optiona
 ``` bash
 nextalign run \
   --input-ref data/reference.fasta \
-  --input-gene-map data/genemap.gff \
   --output-fasta results/aligned.fasta \
-  --output-translations "results/aligned.translations.{gene}.fasta" \
-  --output-insertions results/aligned.insertions.csv \
-  --output-errors results/aligned.errors.csv \
   results/subsampled_sequences.fasta
 ```
 
@@ -301,6 +287,13 @@ less -S results/aa_muts.json
 ```
 
 With these nucleotide and amino acid mutations per branch of the tree and a predefined list of mutations per clade, we can assign internal nodes and tips to clades.
+We define clades in a TSV file with clade names associated with specific alleles that occur at specific sites.
+
+``` bash
+head config/clades.tsv
+```
+
+We can use this configuration file, the mutations, and tree to assign clades per internal node and tip.
 
 ``` bash
 augur clades \
@@ -351,7 +344,7 @@ augur export v2 \
               results/clades.json \
               results/traits.json \
   --metadata results/subsampled_metadata.tsv \
-  --color-by-metadata country region Nextstrain_clade pango_lineage \
+  --color-by-metadata country region \
   --panels tree map entropy frequencies \
   --geo-resolutions country region \
   --include-root-sequence \
@@ -379,11 +372,13 @@ augur frequencies \
 
 To visualize the final tree and frequencies, we can drag these files together onto the [auspice.us](http://auspice.us) landing page. If you are working from a Binder interface, download all of the files in the `auspice/` directory to your computer, open a file explorer/finder window, and drag all of the files on to the auspice.us interface.
 
-If you have Auspice installed locally, you can run a local Auspice server with the following command.
+If you are working from a GitPod interface or have Auspice installed locally, you can run a local Auspice server with the following command.
 
 ``` bash
 auspice view --datasetDir auspice/
 ```
+
+Then, you can view the trees by navigating to http://localhost:4000 or the corresponding address from GitPod.
 
 ## Visualize and interpret a SARS-CoV-2 phylogeny
 
