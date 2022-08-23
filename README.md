@@ -353,9 +353,7 @@ augur export v2 \
               results/traits.json \
   --metadata results/subsampled_metadata.tsv \
   --color-by-metadata country \
-  --panels tree map entropy frequencies \
   --geo-resolutions country \
-  --include-root-sequence \
   --output auspice/ncov.json
 ```
 
