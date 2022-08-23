@@ -71,6 +71,8 @@ In this tutorial, you will learn how to analyze previously curated data and then
 
 ## Build an annotated time-scaled phylogeny of SARS-CoV-2
 
+### Inspect input files
+
 To start, we will inspect the input files for SARS-CoV-2 analysis.
 We will use a curated reference genome and annotations from Nextclade.
 [See the data curation guide](data/README.md) for more details.
@@ -119,6 +121,8 @@ To understand the evolutionary and epidemiological history of these samples, we 
   - infer ancestral sequences and traits
   - visualize the annotated phylogeny
 
+### Select high-quality data
+
 We start by selecting the representative set of high-quality samples.
 We determine the quality of the original data based on attributes of both the genome sequences and metadata.
 First, we calculate statistics across all genome sequences, to identify potentially problematic sequences to filter from the analysis.
@@ -162,6 +166,8 @@ When we list the results directory after running this command, we see the corres
 ls -l results/
 ```
 
+### Subsample data
+
 After filtering for high-quality data, we often still have more samples than we can reasonably use to infer a phylogeny and we need to subsample our data.
 Effective subsampling is a research topic of its own, but most commonly we try to sample evenly through time and space.
 This approach attempts to account for sampling bias.
@@ -178,6 +184,8 @@ augur filter \
   --output-metadata results/subsampled_metadata.tsv \
   --output-sequences results/subsampled_sequences.fasta
 ```
+
+### Align genomes
 
 Next, we align the genome sequences of our subsampled data to a single reference genome.
 This alignment ensures that all genomes have the same coordinates during tree inference.
@@ -203,6 +211,8 @@ nextalign run \
   results/subsampled_sequences.fasta
 ```
 
+### Infer a divergence tree
+
 Infer a divergence tree from the alignment.
 Augur's tree subcommand is a lightweight wrapper around existing tree builders, providing some standardization of the input alignment and output across tools.
 We use IQ-TREE by default, but other options include FastTree and RAxML.
@@ -217,6 +227,8 @@ We can view this tree and its metadata in [auspice.us](https://auspice.us/) or F
 
 > Note: All tree builders used by Augur are maximum-likelihood (ML) tools, enabling the "real-time" part of Nextstrain’s mission at the expense of the posterior and more sophisticated models available through Bayesian methods.
 > The ML approach enables rapid prototyping to identify genomes to include in a more complex, longer-running Bayesian analysis.
+
+### Infer a time tree
 
 With the alignment, the divergence tree, and the dates per sample from the metadata, we can infer a time-scaled phylogeny with estimated dates for internal nodes of the tree.
 Augur's refine subcommand is a lightweight wrapper around [TreeTime](https://github.com/neherlab/treetime).
@@ -259,6 +271,8 @@ augur export v2 \
 We can learn a lot from the tree and its metadata, but we don’t have any details about mutations on the tree, ancestral states, distances between sequences, clades, frequencies of clades through time, etc.
 The next set of commands will produce these annotations on the tree in the format of additional node data JSONs.
 
+### Infer ancestral sequences and nucleotide mutations
+
 One of the most important annotations for our analysis is the list of nucleotide and amino acid mutations per branch in the tree.
 These annotations allow us to identify putative biologically-relevant mutations and also define clades like those for variants of concern.
 To create these annotations, we need to infer the ancestral sequence for each internal node in the tree with `augur ancestral`.
@@ -278,6 +292,8 @@ The output also contains the reference’s nucleotide sequence which gets used d
 less -S results/nt_muts.json
 ```
 
+### Translate nucleotide mutations to amino acid mutations
+
 We can translate these inferred and observed sequences with `augur translate`, to identify all corresponding amino acid mutations per branch in the tree.
 
 ``` bash
@@ -293,6 +309,8 @@ The node data JSON output contains gene coordinates in an "annotations" key that
 ``` bash
 less -S results/aa_muts.json
 ```
+
+### Assign clade labels
 
 With these nucleotide and amino acid mutations per branch of the tree and a predefined list of mutations per clade, we can assign internal nodes and tips to clades.
 We define clades in a TSV file with clade names associated with specific alleles that occur at specific sites.
@@ -319,6 +337,8 @@ This second key is used to visualize clade names as branch labels in Auspice.
 less results/clades.json
 ```
 
+### Infer ancestral states for discrete traits
+
 In a similar way that we infer the ancestral nucleotides for each node in the tree at each position of the alignment, we can infer the ancestral states for other discrete traits available in the metadata.
 The `augur traits` subcommand is a lightweight wrapper around TreeTime that performs discrete trait analysis (DTA) on columns in the given metadata.
 The command assigns the most likely ancestral states to named internal nodes and tips missing values for those states (i.e., samples for which metadata columns contain "?" values) and optionally produces confidence values per possible state.
@@ -340,6 +360,8 @@ Note that this output also contains the inferred transition matrix and equilibri
 less results/traits.json
 ```
 
+### Export files into an Auspice JSON
+
 We now have enough information to investigate mutations in the tree, which geographic locations those mutations might have first appeared in, and how those mutations correspond to known clades in the tree.
 We can export these into the Auspice JSON file that Auspice will use to visualize the tree and its annotations.
 
@@ -357,26 +379,7 @@ augur export v2 \
   --output auspice/ncov.json
 ```
 
-In addition to the annotated tree, we often want to know how frequencies of mutations, clades, or other traits change over time.
-We can estimate these frequencies with the `augur frequencies` subcommand.
-This subcommand assigns a KDE kernel to each tip in the given tree centered on the collection date for the tip in the given metadata.
-The command sums and normalizes the KDE values across all tips and at each timepoint ("pivot") such that frequencies equal 1 at all timepoints.
-The output JSON file is an Auspice "side-car JSON" that Auspice knows how to load for a given main Auspice JSON based on its filename.
-The following command estimates frequencies from the subsampled data at weekly timepoints with a KDE bandwidth of approximately 2 weeks (measured in years).
-
-``` bash
-augur frequencies \
-  --metadata results/subsampled_metadata.tsv \
-  --tree results/tree.nwk \
-  --method kde \
-  --pivot-interval 1 \
-  --pivot-interval-units weeks \
-  --narrow-bandwidth 0.041 \
-  --proportion-wide 0.0 \
-  --output auspice/ncov_tip-frequencies.json
-```
-
-To visualize the final tree and frequencies, we can drag these files together onto the [auspice.us](http://auspice.us) landing page. If you are working from a Binder interface, download all of the files in the `auspice/` directory to your computer, open a file explorer/finder window, and drag all of the files on to the auspice.us interface.
+To visualize the final tree, we can drag its JSON file on to the [auspice.us](http://auspice.us) landing page. If you are working from a Binder interface, download the JSON file in the `auspice/` directory to your computer, open a file explorer/finder window, and drag the file on to the auspice.us interface.
 
 If you are working from a GitPod interface or have Auspice installed locally, you can run a local Auspice server with the following command.
 
@@ -478,7 +481,41 @@ There are benefits and disadvantages to each of these views, depending on the qu
 
 ## Next steps
 
+  - Work through additional exercises listed below
   - [Work through our guide to genomic epidemiology of SARS-CoV-2](https://docs.nextstrain.org/projects/ncov/en/latest/index.html).
   - [Learn how to convert a series of shell commands into a Nextstrain workflow with Snakemake](https://github.com/huddlej/example-nextstrain-workflow).
   - [Learn how to communicate results from genomic epidemiology analyses through Nextstrain Narratives](https://www.youtube.com/playlist?list=PLsFWZl6SQqWxN9SkbgdjU8sylIfhZNDiW).
   - Get involved by [contributing to Nextstrain](https://docs.nextstrain.org/en/latest/guides/contribute/index.html), [asking questions on our discussion site](https://discussion.nextstrain.org/), or [reaching out by email at hello@nextstrain.org](hello@nextstrain.org).
+
+## Additional exercises
+
+### Estimate frequencies of data through time
+
+In addition to the annotated tree, we often want to know how frequencies of mutations, clades, or other traits change over time.
+We can estimate these frequencies with the `augur frequencies` subcommand.
+This subcommand assigns a KDE kernel to each tip in the given tree centered on the collection date for the tip in the given metadata.
+The command sums and normalizes the KDE values across all tips and at each timepoint ("pivot") such that frequencies equal 1 at all timepoints.
+The following command estimates frequencies from the subsampled data at weekly timepoints with a KDE bandwidth of approximately 2 weeks (measured in years).
+
+``` bash
+augur frequencies \
+  --metadata results/subsampled_metadata.tsv \
+  --tree results/tree.nwk \
+  --method kde \
+  --pivot-interval 1 \
+  --pivot-interval-units weeks \
+  --narrow-bandwidth 0.041 \
+  --proportion-wide 0.0 \
+  --output auspice/ncov_tip-frequencies.json
+```
+
+The output JSON file is an Auspice "[sidecar JSON](https://docs.nextstrain.org/en/latest/reference/data-formats.html)" that Auspice knows how to load for a given main Auspice JSON based on its filename.
+We need to tell Auspice to expect this sidecar file when it loads the tree, so we need to modify the `augur export v2` command we used early to include the following argument that tells Auspice which panels to display:
+
+```bash
+augur export v2 \
+  ...snip... \
+  --panels tree map entropy frequencies
+```
+
+To visualize the final tree and frequencies, we can drag these files together onto the [auspice.us](http://auspice.us) landing page. If you are working from a Binder interface, download all of the files in the `auspice/` directory to your computer, open a file explorer/finder window, and drag all of the files on to the auspice.us interface. You can also run `auspice view` locally to see the tree and frequencies.
