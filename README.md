@@ -14,15 +14,26 @@ If you want to use your local environment on your personal computer, you will ne
 
 ## Scope
 
-This workshop focuses on specific file formats, command line instructions required to analyze a specific pathogen, and instructions to visualize and interpret that pathogen's phylogeny in Auspice as a way of exposing the learners to the details of Nextstrain's genomic epidemiology tools.
-This workshop does not include discussions about installation of tools, data curation, or workflow design; these topics are critical but outside the scope of a short workshop on genomic epidemiology.
+This workshop focuses on the following topics to introduce the details of Nextstrain's genomic epidemiology tools:
+
+ - specific file formats
+ - command line instructions required to analyze a specific pathogen
+ - instructions to visualize and interpret that pathogen's phylogeny in Auspice
+
+This workshop does not include discussions about:
+
+ - installation of tools
+ - data curation
+ - workflow design
+
+These topics are critical but outside the scope of a short workshop on genomic epidemiology.
 
 ## Learning objectives
 
 By the end of this workshop, attendees will know how to:
 
   - identify the necessary input files to perform a genomic epidemiology analysis with Nextstrain
-  - run commands in Nextstrain’s bioinformatics toolkit including Augur, Nextalign, and Nextclade to convert input genomes and metadata into an annotated phylogenetic time tree that can be visualized locally or online
+  - run commands in Nextstrain’s bioinformatics toolkit including Augur and Nextalign to convert input genomes and metadata into an annotated phylogenetic time tree that can be visualized locally or online
   - inspect and understand the contents of Nextstrain toolkit command outputs
   - visualize and interpret a phylogenetic tree produced by Nextstrain’s bioinformatics toolkit using Auspice or [auspice.us](http://auspice.us)
 
@@ -244,7 +255,7 @@ augur export v2 \
   --tree results/tree.nwk \
   --node-data results/branch_lengths.json \
   --metadata results/subsampled_metadata.tsv \
-  --color-by-metadata country region Nextstrain_clade pango_lineage \
+  --color-by-metadata country \
   --output auspice/ncov.json
 ```
 
@@ -314,13 +325,13 @@ less results/clades.json
 In a similar way that we infer the ancestral nucleotides for each node in the tree at each position of the alignment, we can infer the ancestral states for other discrete traits available in the metadata.
 The `augur traits` subcommand is a lightweight wrapper around TreeTime that performs discrete trait analysis (DTA) on columns in the given metadata.
 The command assigns the most likely ancestral states to named internal nodes and tips missing values for those states (i.e., samples for which metadata columns contain "?" values) and optionally produces confidence values per possible state.
-The following command infers ancestral country and region with confidence values.
+The following command infers ancestral country with confidence values.
 
 ``` bash
 augur traits \
   --tree results/tree.nwk \
   --metadata results/subsampled_metadata.tsv \
-  --columns country region \
+  --columns country \
   --confidence \
   --output-node-data results/traits.json
 ```
@@ -344,9 +355,9 @@ augur export v2 \
               results/clades.json \
               results/traits.json \
   --metadata results/subsampled_metadata.tsv \
-  --color-by-metadata country region \
+  --color-by-metadata country \
   --panels tree map entropy frequencies \
-  --geo-resolutions country region \
+  --geo-resolutions country \
   --include-root-sequence \
   --output auspice/ncov.json
 ```
