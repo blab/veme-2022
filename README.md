@@ -96,7 +96,7 @@ Genome metadata have:
   - As many additional columns as you like.
 
 ``` bash
-head data/metadata.tsv
+less -S data/metadata.tsv
 ```
 
 To understand the evolutionary and epidemiological history of these samples, we need to:
@@ -164,7 +164,7 @@ We also force-include the reference sequence required to root the tree later on.
 augur filter \
   --metadata results/filtered_metadata.tsv \
   --sequences results/filtered_sequences.fasta \
-  --group-by country month \
+  --group-by country year month \
   --subsample-max-sequences 30 \
   --include config/include.txt \
   --output-metadata results/subsampled_metadata.tsv \
