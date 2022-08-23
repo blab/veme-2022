@@ -395,7 +395,7 @@ Then, you can view the trees by navigating to http://localhost:4000 or the corre
 
 See also, [the example SARS-CoV-2 tree produced by the analysis above](https://nextstrain.org/community/blab/veme-2022/example-ncov).
 
-### Layout
+### Review the Auspice layout
 
 Open [the Nextstrain build for SARS-CoV-2 in Africa as of September 2021](https://nextstrain.org/ncov/gisaid/africa/2021-09-03) and note layout of Auspice:
 
