@@ -151,18 +151,15 @@ augur filter \
   --metadata data/metadata.tsv \
   --sequences data/sequences.fasta \
   --include config/include.txt \
-  --min-date 2021-01-01 \
   --min-length 27000 \
   --output-metadata results/filtered_metadata.tsv \
-  --output-sequences results/filtered_sequences.fasta \
-  --output-log results/filtered_log.tsv
+  --output-sequences results/filtered_sequences.fasta
 ```
 
-The output from the command shows the total number of samples that were filtered out and force-included.
-We can inspect the output log to see why specific samples were filtered or included.
+When we list the results directory after running this command, we see the corresponding filtered metadata and sequences files.
 
 ``` bash
-head results/filtered_log.tsv
+ls -l results/
 ```
 
 After filtering for high-quality data, we often still have more samples than we can reasonably use to infer a phylogeny and we need to subsample our data.
