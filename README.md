@@ -399,7 +399,7 @@ See also, [the example SARS-CoV-2 tree produced by the analysis above](https://n
 
 Open [the Nextstrain build for SARS-CoV-2 in Africa as of September 2021](https://nextstrain.org/ncov/gisaid/africa/2021-09-03) and note layout of Auspice:
 
-  - Navigation panel on left
+  - Control panel on left
   - Main panel on right
     - Tree
     - Map
