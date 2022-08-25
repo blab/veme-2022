@@ -409,12 +409,17 @@ Open [the Nextstrain build for SARS-CoV-2 in Africa as of September 2021](https:
     - Filter lists
     - Metadata and downloads
 
-### Filter data
+### Modify layout
 
-[Filter the tree to just data from Africa](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?f_region=Africa).
-
+[Enable the grid view](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?p=grid).
+Reset zoom on the map, as needed.
 Note how the URL changes in response to interactions with Nextstrain.
 Saving state in the URL allows us to capture specific, detailed views for loading again later.
+You can share this URL to send the same view to anyone else.
+
+### Filter data
+
+[Filter the tree to just data from Africa](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?f_region=Africa&p=grid).
 Note the appearance of the counts of total genomes shown and "Filtered to" section at the top of the main panel.
 Filters act on tips and affect all panels:
 
@@ -425,13 +430,6 @@ Filters act on tips and affect all panels:
 
 Toggle filters with "eye" icons at the top of the main panel or below "Filter Data" section of the navigation panel.
 Remove filters with the "trash can" icons at the top of the main panel or below the "Filter Data" section.
-
-### Modify layout
-
-[Enable the grid view](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?d=tree,map,entropy,frequencies&f_region=Africa&p=grid).
-The URL now reflects changes to the default view.
-You can share this URL to send the same view to anyone else.
-Reset zoom on the map, as needed.
 
 ### Curate a view of your data
 
@@ -445,10 +443,12 @@ The frequency panel shows genotype by color and time along the x-axis, but it do
 
 How can we effectively show the evolution site S:681 through space and time?
 
-[Color by genotype using grid view with time tree on the left and map on the right, entropy turned off, and frequencies enabled](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_region=Africa&p=grid).
+[Color by genotype using grid view with time tree on the left and map on the right, and frequencies enabled](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,entropy,frequencies&f_region=Africa&p=grid).
 To color by genotype, either a) find site 681 in the S gene in the entropy panel and click the corresponding bar, or b) select "Genotype" from the "Color By" menu on the left navigation, select "S", and enter 681 to the site field.
 The map still represents all time points.
 This view shows the global perspective of this site's evolution, but we cannot tell how these changes occurred through time in a specific country.
+
+[Turn off the entropy panel](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_region=Africa&p=grid), so we can focus on the tree, map, and frequencies.
 
 [Filter to Kenya and set "geographic resolution" to "division"](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_country=Kenya&f_region=Africa&p=grid&r=division).
 Reset zoom on map, as needed.
@@ -479,6 +479,21 @@ This requires manual intervention with Nextstrain.
 This view also clearly quantifies the transmission of S:681 genotypes through time with time on the x-axis, the genotype on the y-axis and color.
 Toggle off the button for "Show branches" below the "Scatter" section of the navigation panel, to focus on the observed genomes.
 There are benefits and disadvantages to each of these views, depending on the question you want to answer or the pattern you want to communicate.
+
+### Explore recent data for your country of interest
+
+[Navigate to the most recent global SARS-CoV-2 analysis](https://nextstrain.org/ncov/gisaid/global/6m).
+Filter the tree to samples from your country of interest.
+Which clades have been circulating in that country in the last 6 months?
+
+Change the map's geographic resolution to "division".
+Which divisions (or states) appear to have the most samples?
+Do all divisions have similar clade compositions?
+
+Zoom into the spike gene "S" in the diversity/entropy panel and select the bar for one of the highest entropy positions in the gene.
+Looking at the tree, do the mutations at this site appear only once in the tree or multiple times?
+Looking at the map, are there any divisions in the country that experience different genotypes?
+Looking at the frequencies panel, which genotypes appear to be most successful recently?
 
 ## Next steps
 
