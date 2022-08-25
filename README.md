@@ -428,8 +428,8 @@ Remove filters with the "trash can" icons at the top of the main panel or below 
 
 ### Modify layout
 
-[Turn off the entropy panel and enable the grid view](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?d=tree,map,frequencies&f_region=Africa&p=grid).
-The URL now reflects three major changes to the default view.
+[Enable the grid view](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?d=tree,map,entropy,frequencies&f_region=Africa&p=grid).
+The URL now reflects changes to the default view.
 You can share this URL to send the same view to anyone else.
 Reset zoom on the map, as needed.
 
@@ -446,6 +446,7 @@ The frequency panel shows genotype by color and time along the x-axis, but it do
 How can we effectively show the evolution site S:681 through space and time?
 
 [Color by genotype using grid view with time tree on the left and map on the right, entropy turned off, and frequencies enabled](https://nextstrain.org/ncov/gisaid/africa/2021-09-03?c=gt-S_681&d=tree,map,frequencies&f_region=Africa&p=grid).
+To color by genotype, either a) find site 681 in the S gene in the entropy panel and click the corresponding bar, or b) select "Genotype" from the "Color By" menu on the left navigation, select "S", and enter 681 to the site field.
 The map still represents all time points.
 This view shows the global perspective of this site's evolution, but we cannot tell how these changes occurred through time in a specific country.
 
