@@ -30,7 +30,7 @@ These topics are critical but outside the scope of a short workshop on genomic e
 
 ## Learning objectives
 
-By the end of this workshop, attendees will know how to:
+By the end of this workshop, you will know how to:
 
   - identify the necessary input files to perform a genomic epidemiology analysis with Nextstrain
   - run commands in Nextstrain’s bioinformatics toolkit including Augur and Nextalign to convert input genomes and metadata into an annotated phylogenetic time tree that can be visualized locally or online
