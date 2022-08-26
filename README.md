@@ -1,4 +1,4 @@
-# Workshop for VEME 2022
+# Real-time tracking of pathogen evolution using Nextstrain
 
 ## Prerequisites
 
