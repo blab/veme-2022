@@ -201,8 +201,9 @@ This alignment ensures that all genomes have the same coordinates during tree in
 >   --output results/aligned.fasta
 > ```
 
-Nextalign produces both an alignment of the nucleotide sequences and amino acid alignments for all genes defined in the given gene map.
-Insertions relative to the reference genome and error messages appear in optional comma-separated values (CSV) outputs.
+Nextalign can produce both an alignment of the nucleotide sequences and amino acid alignments for all genes defined in a given gene map.
+It can also produce comma-separated values (CSV) outputs including insertions relative to the reference genome and error messages per input genome.
+The following command just performs the simplest alignment of the nucleotide sequences.
 
 ``` bash
 nextalign run \
