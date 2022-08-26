@@ -54,18 +54,18 @@ These tools have been a key component of New Zealand's pandemic response, as doc
 
 The process for creating a Nextstrain analysis generally requires the following steps.
 
-  - Curate data.
-    - Collect genome sequences.
-    - Collect genome metadata.
-    - Prepare pathogen-specific configuration files and parameters (e.g., reference genomes, gene coordinates, clock rates, etc.).
-  - Analyze data.
-    - Run commands manually or in a workflow.
-    - Run commands locally or in the cloud.
-    - Here, we will focus on how to run commands and understand their inputs and outputs.
-  - Visualize and interpret analysis outputs.
-    - Run a local [Auspice](https://docs.nextstrain.org/projects/auspice/en/stable/) server.
-    - Drag-and-drop onto [auspice.us](http://auspice.us).
-    - Upload data to GitHub or Nextstrain Groups and view through [nextstrain.org](http://nextstrain.org).
+  1. Curate data.
+     - Collect genome sequences.
+     - Collect genome metadata.
+     - Prepare pathogen-specific configuration files and parameters (e.g., reference genomes, gene coordinates, clock rates, etc.).
+  2. Analyze data.
+     - Run commands manually or in a workflow.
+     - Run commands locally or in the cloud.
+     - Here, we will focus on how to run commands and understand their inputs and outputs.
+  3. Visualize and interpret analysis outputs.
+     - Run a local [Auspice](https://docs.nextstrain.org/projects/auspice/en/stable/) server.
+     - Drag-and-drop onto [auspice.us](http://auspice.us).
+     - Upload data to GitHub or Nextstrain Groups and view through [nextstrain.org](http://nextstrain.org).
 
 In this tutorial, you will learn how to analyze previously curated data and then visualize and interpret the resulting annotated phylogenetic tree.
 
@@ -114,12 +114,12 @@ less -S data/metadata.tsv
 
 To understand the evolutionary and epidemiological history of these samples, we need to:
 
-  - select a representative set of high-quality samples
-  - align their genomes
-  - infer a phylogeny
-  - infer a time-scaled phylogeny
-  - infer ancestral sequences and traits
-  - visualize the annotated phylogeny
+  1. select a representative set of high-quality samples
+  1. align their genomes
+  1. infer a phylogeny
+  1. infer a time-scaled phylogeny
+  1. infer ancestral sequences and traits
+  1. visualize the annotated phylogeny
 
 ### Select high-quality data
 
