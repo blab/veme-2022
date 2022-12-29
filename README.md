@@ -147,7 +147,7 @@ augur filter -h
 ```
 
 Filter the data to eliminate low-quality or undesired data based on genome sequence or metadata attributes.
-In the following command, we filter by date and sequence length.
+In the following command, we filter by sequence length.
 We also force the inclusion of reference records that we will need for rooting the tree later.
 
 ``` bash
