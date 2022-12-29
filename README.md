@@ -189,18 +189,6 @@ augur filter \
 
 Next, we align the genome sequences of our subsampled data to a single reference genome.
 This alignment ensures that all genomes have the same coordinates during tree inference.
-
-> Note: Although we use a reference-based alignment with Nextalign below, you may want to perform a multiple sequence alignment with augur align, depending on your pathogen.
->
-> ```bash
-> augur align \
->   --sequences results/subsampled_sequences.fasta \
->   --nthreads 1 \
->   --reference-sequence data/reference.fasta \
->   --fill-gaps \
->   --output results/aligned.fasta
-> ```
-
 Nextalign can produce both an alignment of the nucleotide sequences and amino acid alignments for all genes defined in a given gene map.
 It can also produce comma-separated values (CSV) outputs including insertions relative to the reference genome and error messages per input genome.
 The following command just performs the simplest alignment of the nucleotide sequences.
