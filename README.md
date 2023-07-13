@@ -123,12 +123,10 @@ To understand the evolutionary and epidemiological history of these samples, we 
 
 ### Select high-quality data
 
-We start by selecting the representative set of high-quality samples.
+We start by using [Augur](https://docs.nextstrain.org/projects/augur/en/stable/index.html) to select a representative set of high-quality samples.
 We determine the quality of the original data based on attributes of both the genome sequences and metadata.
-First, we calculate statistics across all genome sequences, to identify potentially problematic sequences to filter from the analysis.
-We will use [Augur](https://docs.nextstrain.org/projects/augur/en/stable/index.html) to calculate these statistics and store them in a results directory.
 
-Create the results directory.
+Create a results directory to store our intermediate analysis outputs.
 
 ``` bash
 mkdir results/
