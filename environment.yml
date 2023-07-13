@@ -6,7 +6,7 @@ channels:
 dependencies:
   - mafft=7.505
   - iqtree=2.2.0_beta
-  - nextalign=2.4.0
-  - python>=3.7*
+  - nextalign=2.14.0
+  - python>=3.10*
   - pip:
-    - nextstrain-augur==17.0.0
+    - nextstrain-augur==22.1.0
