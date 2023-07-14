@@ -1,4 +1,4 @@
-image: nextstrain/base:branch-add-git-to-runtime-dependencies
+image: nextstrain/base:latest
 tasks:
   - command: |
       nextstrain check-setup --set-default
