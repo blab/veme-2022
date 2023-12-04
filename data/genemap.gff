@@ -4,6 +4,7 @@
 # For gene map purpses we only need some of the columns. We substitute unused values with "." as per GFF spec.
 # See GFF format reference at https://www.ensembl.org/info/website/upload/gff.html
 # seqname	source	feature	start	end	score	strand	frame	attribute
+MN908947	GenBank	source	1	29903	.	+	.	gene_name=nuc
 MN908947	GenBank	gene	266	13468	.	+	.	gene_name=ORF1a
 MN908947	GenBank	gene	13468	21555	.	+	.	gene_name=ORF1b
 MN908947	GenBank	gene	25393	26220	.	+	.	gene_name=ORF3a
