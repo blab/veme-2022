@@ -518,7 +518,16 @@ We need to tell Auspice to expect this sidecar file when it loads the tree, so w
 
 ```bash
 augur export v2 \
-  ...snip... \
+  --tree results/tree.nwk \
+  --node-data results/branch_lengths.json \
+              results/nt_muts.json \
+              results/aa_muts.json \
+              results/clades.json \
+              results/traits.json \
+  --metadata results/subsampled_metadata.tsv \
+  --color-by-metadata country \
+  --geo-resolutions country \
+  --output auspice/ncov.json \
   --panels tree map entropy frequencies
 ```
 
